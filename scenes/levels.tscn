@@ -1,0 +1,679 @@
+[gd_scene load_steps=55 format=3 uid="uid://c7137oov5bolj"]
+
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="1_5fk4n"]
+[ext_resource type="Script" path="res://scripts/levels.gd" id="1_7qdbn"]
+[ext_resource type="Texture2D" uid="uid://dwhxkdqk06svp" path="res://assets/images/harta.jpg" id="2_n17no"]
+[ext_resource type="StyleBox" uid="uid://c3fg2qekqd7c2" path="res://assets/styles/button_pressed.tres" id="3_el5yy"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_vo27l"]
+[ext_resource type="StyleBox" uid="uid://dry8hhmymnxnp" path="res://assets/styles/letter_e_hover.tres" id="7_6f7qb"]
+[ext_resource type="Script" path="res://scripts/button_e.gd" id="7_ru1x4"]
+[ext_resource type="Script" path="res://scenes/litera_a.gd" id="7_updjx"]
+[ext_resource type="StyleBox" uid="uid://myi5uj7blb1v" path="res://assets/styles/letter_e.tres" id="8_hv4dd"]
+[ext_resource type="Theme" uid="uid://nvubom0smg1c" path="res://assets/themes/letter_button.tres" id="8_xahwx"]
+[ext_resource type="StyleBox" uid="uid://pe2pd21hhj0a" path="res://assets/styles/letter_i.tres" id="9_5io4x"]
+[ext_resource type="StyleBox" uid="uid://b64do0xgkpsvl" path="res://assets/styles/letter_i_hover.tres" id="9_bv6gk"]
+[ext_resource type="StyleBox" uid="uid://bfpo57vcdc65b" path="res://assets/styles/letter_o.tres" id="10_hn106"]
+[ext_resource type="StyleBox" uid="uid://bdlpm3oymrecu" path="res://assets/styles/letter_o_hover.tres" id="11_425o7"]
+[ext_resource type="StyleBox" uid="uid://1kpg5u8rrwn5" path="res://assets/styles/letter_u.tres" id="11_ggasl"]
+[ext_resource type="StyleBox" uid="uid://duvs6yo8ltp01" path="res://assets/styles/letter_b.tres" id="12_c7m1w"]
+[ext_resource type="Texture2D" uid="uid://d10kbbwr7i18v" path="res://assets/images/arrow.png" id="12_epom2"]
+[ext_resource type="Script" path="res://scenes/litera_i.gd" id="12_pnqw2"]
+[ext_resource type="StyleBox" uid="uid://cyyppy1psqq27" path="res://assets/styles/letter_u_hover.tres" id="13_o271s"]
+[ext_resource type="StyleBox" uid="uid://coib4emuo17pa" path="res://assets/styles/letter_c.tres" id="13_v77uu"]
+[ext_resource type="Script" path="res://scenes/litera_o.gd" id="14_qarac"]
+[ext_resource type="StyleBox" uid="uid://dafldilevi136" path="res://assets/styles/letter_m_hover.tres" id="16_psh31"]
+[ext_resource type="StyleBox" uid="uid://mnnb1qjanknu" path="res://assets/styles/letter_m.tres" id="17_jdop0"]
+[ext_resource type="Script" path="res://scenes/litera_u.gd" id="17_yqin4"]
+[ext_resource type="Script" path="res://scenes/letter_m.gd" id="18_8ey6g"]
+[ext_resource type="StyleBox" uid="uid://cg0bfpupack82" path="res://assets/styles/letter_b_hover.tres" id="18_nag8c"]
+[ext_resource type="AudioStream" uid="uid://bkc0j3x8l6hc2" path="res://joc_cavaler/assets/music/congrats.wav" id="18_ubpbu"]
+[ext_resource type="StyleBox" uid="uid://b33w0quosk1ia" path="res://assets/styles/letter_c_hover.tres" id="20_1lh6e"]
+[ext_resource type="StyleBox" uid="uid://cxfa2ueb3rwsb" path="res://assets/styles/letter_d_hover.tres" id="21_3rh2c"]
+[ext_resource type="StyleBox" uid="uid://cib3kf8ppaibr" path="res://assets/styles/letter_d.tres" id="22_yucvo"]
+[ext_resource type="StyleBox" uid="uid://cpy7lsgb8vvgi" path="res://assets/styles/letter_f_hover.tres" id="23_aqsyg"]
+[ext_resource type="Script" path="res://scripts/scripts_letter_b/button_b.gd" id="23_m753x"]
+[ext_resource type="StyleBox" uid="uid://bh1qie4ebbvm8" path="res://assets/styles/letter_f.tres" id="24_i8rt8"]
+[ext_resource type="StyleBox" uid="uid://cuynpvoh0ky5p" path="res://assets/styles/letter_j_hover.tres" id="25_8u4mt"]
+[ext_resource type="StyleBox" uid="uid://q2jjvcwqputi" path="res://assets/styles/letter_j.tres" id="26_ge7lt"]
+[ext_resource type="StyleBox" uid="uid://c1qrixloiiref" path="res://assets/styles/letter_k_hover.tres" id="27_evc0t"]
+[ext_resource type="StyleBox" uid="uid://dmpi3ku3c8rx8" path="res://assets/styles/letter_k.tres" id="28_hh0g1"]
+[ext_resource type="StyleBox" uid="uid://b3o8wnww1rfv1" path="res://assets/styles/letter_l_hover.tres" id="29_t8l2r"]
+[ext_resource type="StyleBox" uid="uid://w462q7vqk1m2" path="res://assets/styles/letter_l.tres" id="30_sbre2"]
+[ext_resource type="StyleBox" uid="uid://bk4gia0cbse51" path="res://assets/styles/letter_n_hover.tres" id="31_o57pb"]
+[ext_resource type="StyleBox" uid="uid://bwl4mb4bjd8v8" path="res://assets/styles/letter_n.tres" id="32_o33va"]
+[ext_resource type="StyleBox" uid="uid://oj47osjlfktw" path="res://assets/styles/letter_p_hover.tres" id="33_wnueb"]
+[ext_resource type="StyleBox" uid="uid://407r87h3tfuw" path="res://assets/styles/letter_p.tres" id="34_qia2a"]
+[ext_resource type="StyleBox" uid="uid://be2uyqmt56w1g" path="res://assets/styles/letter_s_hover.tres" id="35_i6x1a"]
+[ext_resource type="StyleBox" uid="uid://ca18vnebttvqs" path="res://assets/styles/letter_s.tres" id="36_8cda1"]
+[ext_resource type="Script" path="res://scripts/scripts_letter_s/button_s.gd" id="39_crx6c"]
+[ext_resource type="Texture2D" uid="uid://43rwbanreyaa" path="res://assets/images/coin.png" id="42_544b7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ssv3q"]
+texture = ExtResource("2_n17no")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yv08q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nw37"]
+bg_color = Color(0.788365, 0.184431, 0.908804, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxseb"]
+bg_color = Color(0.374022, 0.363141, 0.920136, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogwpa"]
+bg_color = Color(0.971745, 0.274609, 0.615281, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5vj4"]
+bg_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_foac7"]
+
+[node name="Levels" type="Control" groups=["Persist"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7qdbn")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ssv3q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -86.0
+offset_right = 176.0
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="Silabe" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_vo27l")
+theme_override_fonts/font = ExtResource("1_5fk4n")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yv08q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1nw37")
+theme_override_styles/pressed = ExtResource("3_el5yy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxseb")
+text = "Silabe"
+
+[node name="Back2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_vo27l")
+theme_override_fonts/font = ExtResource("1_5fk4n")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_1nw37")
+theme_override_styles/pressed = ExtResource("3_el5yy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ogwpa")
+text = "Înapoi"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.5908
+offset_top = -221.199
+offset_right = 579.409
+offset_bottom = 171.801
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5fk4n")
+theme_override_font_sizes/font_size = 70
+text = "Vocale"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5fk4n")
+theme_override_font_sizes/font_size = 70
+text = "Consoane"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="Letters" type="Node" parent="."]
+
+[node name="Litera_A" type="Button" parent="Letters"]
+offset_left = 71.0
+offset_top = 33.0
+offset_right = 118.0
+offset_bottom = 83.0
+theme = ExtResource("8_xahwx")
+text = "      "
+script = ExtResource("7_updjx")
+
+[node name="Litera_E" type="Button" parent="Letters"]
+offset_left = 257.0
+offset_top = 25.0
+offset_right = 304.0
+offset_bottom = 75.0
+theme = ExtResource("8_xahwx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("7_6f7qb")
+theme_override_styles/pressed = ExtResource("8_hv4dd")
+theme_override_styles/normal = ExtResource("8_hv4dd")
+script = ExtResource("7_ru1x4")
+
+[node name="Litera_I" type="Button" parent="Letters"]
+offset_left = 259.0
+offset_top = 146.0
+offset_right = 306.0
+offset_bottom = 188.0
+theme = ExtResource("8_xahwx")
+theme_override_styles/hover = ExtResource("9_bv6gk")
+theme_override_styles/pressed = ExtResource("9_5io4x")
+theme_override_styles/normal = ExtResource("9_5io4x")
+text = "      "
+script = ExtResource("12_pnqw2")
+
+[node name="Litera_O" type="Button" parent="Letters"]
+offset_left = 306.0
+offset_top = 228.0
+offset_right = 353.0
+offset_bottom = 270.0
+theme = ExtResource("8_xahwx")
+theme_override_styles/hover = ExtResource("11_425o7")
+theme_override_styles/pressed = ExtResource("10_hn106")
+theme_override_styles/normal = ExtResource("10_hn106")
+text = "      "
+script = ExtResource("14_qarac")
+
+[node name="Litera_U" type="Button" parent="Letters"]
+offset_left = 414.0
+offset_top = 234.0
+offset_right = 461.0
+offset_bottom = 276.0
+theme = ExtResource("8_xahwx")
+theme_override_styles/hover = ExtResource("13_o271s")
+theme_override_styles/pressed = ExtResource("11_ggasl")
+theme_override_styles/normal = ExtResource("11_ggasl")
+text = "      "
+script = ExtResource("17_yqin4")
+
+[node name="Litera_M" type="Button" parent="Letters"]
+offset_left = 504.0
+offset_top = 281.0
+offset_right = 540.0
+offset_bottom = 331.0
+theme = ExtResource("8_xahwx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("16_psh31")
+theme_override_styles/pressed = ExtResource("17_jdop0")
+theme_override_styles/normal = ExtResource("17_jdop0")
+text = "      "
+script = ExtResource("18_8ey6g")
+
+[node name="Litera_B" type="Button" parent="Letters"]
+offset_left = 481.0
+offset_top = 373.0
+offset_right = 528.0
+offset_bottom = 415.0
+theme = ExtResource("8_xahwx")
+theme_override_styles/hover = ExtResource("18_nag8c")
+theme_override_styles/pressed = ExtResource("12_c7m1w")
+theme_override_styles/normal = ExtResource("12_c7m1w")
+text = "      "
+script = ExtResource("23_m753x")
+
+[node name="Litera_C" type="Button" parent="Letters"]
+offset_left = 589.0
+offset_top = 318.0
+offset_right = 636.0
+offset_bottom = 360.0
+theme = ExtResource("8_xahwx")
+theme_override_styles/hover = ExtResource("20_1lh6e")
+theme_override_styles/pressed = ExtResource("13_v77uu")
+theme_override_styles/normal = ExtResource("13_v77uu")
+text = "      "
+
+[node name="Litera_D" type="Button" parent="Letters"]
+offset_left = 698.0
+offset_top = 305.0
+offset_right = 745.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("21_3rh2c")
+theme_override_styles/pressed = ExtResource("22_yucvo")
+theme_override_styles/normal = ExtResource("22_yucvo")
+text = "      "
+
+[node name="Litera_F" type="Button" parent="Letters"]
+offset_left = 811.0
+offset_top = 303.0
+offset_right = 858.0
+offset_bottom = 353.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("23_aqsyg")
+theme_override_styles/pressed = ExtResource("24_i8rt8")
+theme_override_styles/normal = ExtResource("24_i8rt8")
+text = "      "
+
+[node name="Litera_G" type="Button" parent="Letters"]
+offset_left = 704.0
+offset_top = 403.0
+offset_right = 734.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 30
+text = "G"
+
+[node name="Litera_H" type="Button" parent="Letters"]
+offset_left = 779.0
+offset_top = 469.0
+offset_right = 810.0
+offset_bottom = 519.0
+theme_override_font_sizes/font_size = 30
+text = "H"
+
+[node name="Litera_J" type="Button" parent="Letters"]
+offset_left = 687.0
+offset_top = 538.0
+offset_right = 734.0
+offset_bottom = 588.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("25_8u4mt")
+theme_override_styles/pressed = ExtResource("26_ge7lt")
+theme_override_styles/normal = ExtResource("26_ge7lt")
+text = "      "
+
+[node name="Litera_K" type="Button" parent="Letters"]
+offset_left = 775.0
+offset_top = 576.0
+offset_right = 802.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("27_evc0t")
+theme_override_styles/pressed = ExtResource("28_hh0g1")
+theme_override_styles/normal = ExtResource("28_hh0g1")
+text = "      "
+
+[node name="Litera_L" type="Button" parent="Letters"]
+offset_left = 875.0
+offset_top = 576.0
+offset_right = 899.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("29_t8l2r")
+theme_override_styles/pressed = ExtResource("30_sbre2")
+theme_override_styles/normal = ExtResource("30_sbre2")
+text = "      "
+
+[node name="Litera_N" type="Button" parent="Letters"]
+offset_left = 933.0
+offset_top = 461.0
+offset_right = 965.0
+offset_bottom = 511.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("31_o57pb")
+theme_override_styles/pressed = ExtResource("32_o33va")
+theme_override_styles/normal = ExtResource("32_o33va")
+text = "      "
+
+[node name="Litera_P" type="Button" parent="Letters"]
+offset_left = 850.0
+offset_top = 484.0
+offset_right = 876.0
+offset_bottom = 534.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("33_wnueb")
+theme_override_styles/pressed = ExtResource("34_qia2a")
+theme_override_styles/normal = ExtResource("34_qia2a")
+text = "      "
+
+[node name="Litera_Q" type="Button" parent="Letters"]
+offset_left = 849.0
+offset_top = 404.0
+offset_right = 881.0
+offset_bottom = 454.0
+theme_override_font_sizes/font_size = 30
+text = "Q"
+
+[node name="Litera_R" type="Button" parent="Letters"]
+offset_left = 941.0
+offset_top = 383.0
+offset_right = 968.0
+offset_bottom = 433.0
+theme_override_font_sizes/font_size = 30
+text = "R"
+
+[node name="Litera_S" type="Button" parent="Letters"]
+offset_left = 1026.0
+offset_top = 385.0
+offset_right = 1051.0
+offset_bottom = 435.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("35_i6x1a")
+theme_override_styles/pressed = ExtResource("36_8cda1")
+theme_override_styles/normal = ExtResource("36_8cda1")
+text = "      "
+script = ExtResource("39_crx6c")
+
+[node name="Litera_T" type="Button" parent="Letters"]
+offset_left = 1070.0
+offset_top = 321.0
+offset_right = 1095.0
+offset_bottom = 371.0
+theme_override_font_sizes/font_size = 30
+text = "T"
+
+[node name="Litera_V" type="Button" parent="Letters"]
+offset_left = 985.0
+offset_top = 304.0
+offset_right = 1012.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 30
+text = "V"
+
+[node name="Litera_W" type="Button" parent="Letters"]
+offset_left = 977.0
+offset_top = 141.0
+offset_right = 1013.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 30
+text = "W"
+
+[node name="Litera_X" type="Button" parent="Letters"]
+offset_left = 975.0
+offset_top = 54.0
+offset_right = 1002.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 30
+text = "X"
+
+[node name="Litera_Y" type="Button" parent="Letters"]
+offset_left = 814.0
+offset_top = 44.0
+offset_right = 840.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 30
+text = "Y"
+
+[node name="Litera_Z" type="Button" parent="Letters"]
+offset_left = 1104.0
+offset_top = 189.0
+offset_right = 1129.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 30
+text = "Z"
+
+[node name="Arrows" type="Node" parent="."]
+
+[node name="Arrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(188, 61)
+rotation = 1.57079
+scale = Vector2(0.230914, 0.214267)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow2" type="Sprite2D" parent="Arrows"]
+position = Vector2(281, 111)
+rotation = -3.14159
+scale = Vector2(0.217552, 0.128599)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow3" type="Sprite2D" parent="Arrows"]
+position = Vector2(301, 214)
+rotation = 2.61799
+scale = Vector2(0.148952, 0.103594)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow4" type="Sprite2D" parent="Arrows"]
+position = Vector2(381.943, 257)
+rotation = 1.57079
+scale = Vector2(0.148952, 0.11509)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow5" type="Sprite2D" parent="Arrows"]
+position = Vector2(490, 270)
+rotation = 2.09439
+scale = Vector2(0.148952, 0.11509)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow6" type="Sprite2D" parent="Arrows"]
+position = Vector2(503, 349)
+rotation = -2.618
+scale = Vector2(0.148952, 0.11509)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow7" type="Sprite2D" parent="Arrows"]
+position = Vector2(556.364, 354.903)
+rotation = 1.0472
+scale = Vector2(0.148952, 0.139285)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow8" type="Sprite2D" parent="Arrows"]
+position = Vector2(659, 335)
+rotation = 1.57079
+scale = Vector2(0.148952, 0.161452)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow9" type="Sprite2D" parent="Arrows"]
+position = Vector2(777, 333)
+rotation = 1.57079
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow10" type="Sprite2D" parent="Arrows"]
+position = Vector2(764, 389)
+rotation = -2.3562
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow11" type="Sprite2D" parent="Arrows"]
+position = Vector2(766, 461)
+rotation = 1.83259
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow12" type="Sprite2D" parent="Arrows"]
+position = Vector2(753, 541)
+rotation = -2.3562
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow13" type="Sprite2D" parent="Arrows"]
+position = Vector2(752, 600)
+rotation = 2.35619
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow14" type="Sprite2D" parent="Arrows"]
+position = Vector2(841, 604)
+rotation = 1.57079
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow15" type="Sprite2D" parent="Arrows"]
+position = Vector2(872, 565)
+rotation = -0.261799
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow16" type="Sprite2D" parent="Arrows"]
+position = Vector2(932, 593)
+rotation = 0.785397
+scale = Vector2(0.148952, 0.120067)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow17" type="Sprite2D" parent="Arrows"]
+position = Vector2(950.234, 539.842)
+scale = Vector2(0.135806, 0.112665)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow18" type="Sprite2D" parent="Arrows"]
+position = Vector2(915, 419)
+rotation = 1.309
+scale = Vector2(0.122637, 0.112001)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow19" type="Sprite2D" parent="Arrows"]
+position = Vector2(865, 476)
+scale = Vector2(0.1121, 0.0970161)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow20" type="Sprite2D" parent="Arrows"]
+position = Vector2(997, 414)
+rotation = 1.57079
+scale = Vector2(0.1121, 0.0970161)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow21" type="Sprite2D" parent="Arrows"]
+position = Vector2(1082, 394)
+rotation = 0.523598
+scale = Vector2(0.1121, 0.0970161)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow22" type="Sprite2D" parent="Arrows"]
+position = Vector2(1041, 339)
+rotation = -1.0472
+scale = Vector2(0.1121, 0.0970161)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow23" type="Sprite2D" parent="Arrows"]
+position = Vector2(989, 286)
+scale = Vector2(0.1121, 0.0970161)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow24" type="Sprite2D" parent="Arrows"]
+position = Vector2(985, 214)
+scale = Vector2(0.0990187, 0.0836643)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow25" type="Sprite2D" parent="Arrows"]
+position = Vector2(989, 119)
+scale = Vector2(0.0990187, 0.0836643)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow27" type="Sprite2D" parent="Arrows"]
+position = Vector2(1028, 61)
+rotation = 1.57079
+scale = Vector2(0.0990187, 0.0836643)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow28" type="Sprite2D" parent="Arrows"]
+position = Vector2(1047, 86)
+rotation = 3.14159
+scale = Vector2(0.0850983, 0.068004)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow29" type="Sprite2D" parent="Arrows"]
+position = Vector2(1086, 97)
+rotation = 1.57079
+scale = Vector2(0.0850983, 0.068004)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow30" type="Sprite2D" parent="Arrows"]
+position = Vector2(1115, 138.391)
+rotation = 3.14159
+scale = Vector2(0.0850983, 0.167186)
+texture = ExtResource("12_epom2")
+
+[node name="Arrow26" type="Sprite2D" parent="Arrows"]
+position = Vector2(905.855, 58)
+rotation = -1.57079
+scale = Vector2(0.0990187, 0.236787)
+texture = ExtResource("12_epom2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_ubpbu")
+volume_db = 5.943
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y5vj4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Coins" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_5fk4n")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_foac7")
+text = "0 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("42_544b7")
+expand_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/Silabe" to="." method="_on_silabe_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back2" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Letters/Litera_A" to="Letters/Litera_A" method="_on_pressed"]
+[connection signal="ready" from="Letters/Litera_A" to="." method="_on_litera_a_ready"]
+[connection signal="pressed" from="Letters/Litera_E" to="." method="_on_litera_e_pressed"]
+[connection signal="pressed" from="Letters/Litera_E" to="Letters/Litera_E" method="_on_pressed"]
+[connection signal="pressed" from="Letters/Litera_I" to="." method="_on_litera_i_pressed"]
+[connection signal="pressed" from="Letters/Litera_O" to="Letters/Litera_O" method="_on_pressed"]
+[connection signal="pressed" from="Letters/Litera_U" to="." method="_on_litera_u_pressed"]
+[connection signal="pressed" from="Letters/Litera_M" to="Letters/Litera_M" method="_on_pressed"]
+[connection signal="pressed" from="Letters/Litera_B" to="." method="_on_litera_b_pressed"]
+[connection signal="pressed" from="Letters/Litera_C" to="." method="_on_litera_c_pressed"]
+[connection signal="pressed" from="Letters/Litera_S" to="." method="_on_litera_s_pressed"]

@@ -1,0 +1,562 @@
+[gd_scene load_steps=55 format=3 uid="uid://6esad8n3va4y"]
+
+[ext_resource type="Texture2D" uid="uid://rbnvbwttsj6g" path="res://assets/images/field.jpg" id="1_dyq6x"]
+[ext_resource type="Script" path="res://scripts/litera_e.gd" id="1_hmmgu"]
+[ext_resource type="AudioStream" uid="uid://b6obsr4l0vptl" path="res://assets/sounds/voices/LItera_E_Intro.wav" id="3_31rrx"]
+[ext_resource type="Script" path="res://scripts/animation_player.gd" id="4_ur825"]
+[ext_resource type="Texture2D" uid="uid://cvr1o7ig82lw8" path="res://assets/images/letter_e_scene/letter_e.png" id="5_j44w7"]
+[ext_resource type="Script" path="res://scenes/control.gd" id="6_bdtyt"]
+[ext_resource type="Script" path="res://scenes/cos_corecte.gd" id="6_vhwp3"]
+[ext_resource type="Texture2D" uid="uid://diiin78ao8cpw" path="res://assets/images/basket.png" id="10_fjbc8"]
+[ext_resource type="Script" path="res://scenes/cos_incorecte.gd" id="10_u3c0b"]
+[ext_resource type="Texture2D" uid="uid://cgyrvr14wivmd" path="res://assets/images/letter_e_scene/animale.png" id="10_xso0i"]
+[ext_resource type="Script" path="res://scenes/elefant.gd" id="11_5xi11"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="11_apm4n"]
+[ext_resource type="Texture2D" uid="uid://cvkged1j75rs7" path="res://assets/images/letter_e_scene/letter.png" id="11_fkooh"]
+[ext_resource type="Texture2D" uid="uid://bssg5a274bk5n" path="res://assets/images/letter_e_scene/alphabet.png" id="12_aq8qd"]
+[ext_resource type="Texture2D" uid="uid://yvl6mutv16a2" path="res://assets/images/not_e.png" id="12_i72nt"]
+[ext_resource type="Texture2D" uid="uid://bo20t2f2gt54k" path="res://assets/images/letter_e_scene/carne.png" id="12_ivg03"]
+[ext_resource type="Script" path="res://scenes/elan.gd" id="13_5teas"]
+[ext_resource type="Texture2D" uid="uid://beutaubdldmgq" path="res://assets/images/letter_e_scene/leu.png" id="13_if070"]
+[ext_resource type="Script" path="res://scenes/carne.gd" id="15_1yxx8"]
+[ext_resource type="Script" path="res://scenes/leu.gd" id="17_tpkt0"]
+[ext_resource type="Texture2D" uid="uid://cx5jimodpg5j8" path="res://assets/images/letter_e_scene/bee.svg" id="20_tqf67"]
+[ext_resource type="Texture2D" uid="uid://ckxal4l2q8w4r" path="res://assets/images/letter_e_scene/chick.svg" id="21_hlg4o"]
+[ext_resource type="Texture2D" uid="uid://loyk818pntd7" path="res://assets/images/letter_e_scene/cock.svg" id="22_03ui4"]
+[ext_resource type="Texture2D" uid="uid://c135cydchjdjk" path="res://assets/images/letter_e_scene/dog.svg" id="23_bija0"]
+[ext_resource type="Texture2D" uid="uid://dn2r5402dkp6t" path="res://assets/images/letter_e_scene/horse.svg" id="24_iutpl"]
+[ext_resource type="Texture2D" uid="uid://bnpcmal2phdj5" path="res://assets/images/letter_e_scene/zebra.svg" id="25_6tkd7"]
+[ext_resource type="AudioStream" uid="uid://chp73h3gdirqb" path="res://assets/sounds/voices/Instructiuni.wav" id="27_i4vql"]
+[ext_resource type="AudioStream" uid="uid://b3p8o82t3dc82" path="res://assets/sounds/voices/ding.wav" id="28_dbaqk"]
+[ext_resource type="AudioStream" uid="uid://dd8dkfo8f12j0" path="res://assets/sounds/voices/win.wav" id="29_c4dcv"]
+[ext_resource type="AudioStream" uid="uid://bokq63if44ce3" path="res://assets/sounds/voices/error.wav" id="29_pexlp"]
+[ext_resource type="AudioStream" uid="uid://bxnm0y1rcs2sp" path="res://assets/sounds/voices/win_e.wav" id="30_s2bx3"]
+[ext_resource type="AudioStream" uid="uid://cuw2t14eaf587" path="res://assets/sounds/voices/coin.wav" id="31_ruip3"]
+
+[sub_resource type="Animation" id="Animation_tlje3"]
+resource_name = "E_fade_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Letter_E:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0457764, 0.039917), Vector2(0.139931, 0.129495), Vector2(0.112323, 0.0971997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Letter_E:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4nbw4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Letter_E:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0457764, 0.039917)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Letter_E:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kyo1t"]
+_data = {
+"E_fade_animation": SubResource("Animation_tlje3"),
+"RESET": SubResource("Animation_4nbw4")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfru7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqbgc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gwg6t"]
+texture = ExtResource("10_xso0i")
+region_rect = Rect2(-1, 0.5, 245, 245)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ws37"]
+bg_color = Color(0.806946, 0.391655, 0.929734, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kqtl"]
+texture = ExtResource("12_ivg03")
+region_rect = Rect2(20, 32, 256, 151)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d5xmu"]
+texture = ExtResource("13_if070")
+region_rect = Rect2(5, 10, 216, 233)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtdns"]
+texture = ExtResource("10_xso0i")
+region_rect = Rect2(251, 6, 301, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cgkd6"]
+texture = ExtResource("20_tqf67")
+region_rect = Rect2(49, 100, 414, 336)
+
+[sub_resource type="GDScript" id="GDScript_nhhbq"]
+script/source = "extends PanelContainer
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	
+	var preview = self.duplicate()
+	
+	
+	set_drag_preview(preview)
+	var label = $BoxContainer/Albina
+	var data = [self,label.text]
+	return data
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ixyom"]
+texture = ExtResource("21_hlg4o")
+region_rect = Rect2(49, 100, 414, 336)
+
+[sub_resource type="GDScript" id="GDScript_402wh"]
+script/source = "extends PanelContainer
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	
+	var preview = self.duplicate()
+	
+	
+	set_drag_preview(preview)
+	var label = $BoxContainer/Pui
+	var data = [self,label.text]
+	return data
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sly3w"]
+texture = ExtResource("22_03ui4")
+region_rect = Rect2(49, 76, 414, 387)
+
+[sub_resource type="GDScript" id="GDScript_koqyl"]
+script/source = "extends PanelContainer
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	
+	var preview = self.duplicate()
+	
+	
+	set_drag_preview(preview)
+	var label = $BoxContainer/Gaina
+	var data = [self,label.text]
+	return data
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ayfgw"]
+texture = ExtResource("23_bija0")
+region_rect = Rect2(49, 100, 414, 336)
+
+[sub_resource type="GDScript" id="GDScript_vr564"]
+script/source = "extends PanelContainer
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	
+	var preview = self.duplicate()
+	
+	
+	set_drag_preview(preview)
+	var label = $BoxContainer/Caine
+	var data = [self,label.text]
+	return data
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tj2ml"]
+texture = ExtResource("24_iutpl")
+region_rect = Rect2(49, 49, 414, 414)
+
+[sub_resource type="GDScript" id="GDScript_x84mi"]
+script/source = "extends PanelContainer
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	
+	var preview = self.duplicate()
+	
+	
+	set_drag_preview(preview)
+	var label = $BoxContainer/Cal
+	var data = [self,label.text]
+	return data
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q577t"]
+texture = ExtResource("25_6tkd7")
+region_rect = Rect2(49, 49, 414, 414)
+
+[sub_resource type="GDScript" id="GDScript_07pcm"]
+script/source = "extends PanelContainer
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	
+	var preview = self.duplicate()
+	
+	
+	set_drag_preview(preview)
+	var label = $BoxContainer/Zebra
+	var data = [self,label.text]
+	return data
+"
+
+[node name="Node2D" type="Node2D" groups=["Persist"]]
+script = ExtResource("1_hmmgu")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+light_mask = 0
+scale = Vector2(1.11, 1.11)
+texture = ExtResource("1_dyq6x")
+centered = false
+
+[node name="Intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_31rrx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kyo1t")
+}
+script = ExtResource("4_ur825")
+
+[node name="Letter_E" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(485, 167)
+scale = Vector2(0.0457764, 0.039917)
+texture = ExtResource("5_j44w7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_bdtyt")
+
+[node name="Cos Corecte" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_top = 428.0
+offset_right = 201.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nfru7")
+script = ExtResource("6_vhwp3")
+
+[node name="Basket" type="Sprite2D" parent="Control/Cos Corecte"]
+position = Vector2(102, 106)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_fjbc8")
+
+[node name="E_mic" type="Sprite2D" parent="Control/Cos Corecte"]
+position = Vector2(130, 157)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_fkooh")
+
+[node name="E_mare" type="Sprite2D" parent="Control/Cos Corecte"]
+position = Vector2(68, 155)
+scale = Vector2(0.121875, 0.112109)
+texture = ExtResource("12_aq8qd")
+
+[node name="Cos Incorecte" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 428.0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gqbgc")
+script = ExtResource("10_u3c0b")
+
+[node name="Basket" type="Sprite2D" parent="Control/Cos Incorecte"]
+position = Vector2(102, 106)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_fjbc8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Cos Incorecte"]
+position = Vector2(99.9999, 158)
+scale = Vector2(0.2848, 0.243504)
+texture = ExtResource("12_i72nt")
+
+[node name="Elan" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 287.0
+offset_right = 459.0
+offset_bottom = 412.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gwg6t")
+script = ExtResource("13_5teas")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Elan"]
+layout_mode = 2
+alignment = 1
+
+[node name="Elan" type="Label" parent="Control/Elan/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Elan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Carne" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 457.0
+offset_right = 488.0
+offset_bottom = 633.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1kqtl")
+script = ExtResource("15_1yxx8")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Carne"]
+layout_mode = 2
+alignment = 1
+
+[node name="Carne" type="Label" parent="Control/Carne/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Carne"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Leu" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 459.0
+offset_right = 844.0
+offset_bottom = 635.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_d5xmu")
+script = ExtResource("17_tpkt0")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Leu"]
+layout_mode = 2
+alignment = 1
+
+[node name="Leu" type="Label" parent="Control/Leu/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Leu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Elefant" type="PanelContainer" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 667.0
+offset_top = 274.0
+offset_right = 909.0
+offset_bottom = 450.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mtdns")
+script = ExtResource("11_5xi11")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Elefant"]
+layout_mode = 2
+alignment = 1
+
+[node name="Elefant" type="Label" parent="Control/Elefant/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Elefant"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Albina" type="PanelContainer" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 17.0
+offset_top = 28.0
+offset_right = 169.0
+offset_bottom = 155.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cgkd6")
+script = SubResource("GDScript_nhhbq")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Albina"]
+layout_mode = 2
+alignment = 1
+
+[node name="Albina" type="Label" parent="Control/Albina/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Albina"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pui" type="PanelContainer" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 481.0
+offset_top = 295.0
+offset_right = 613.0
+offset_bottom = 398.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ixyom")
+script = SubResource("GDScript_402wh")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Pui"]
+layout_mode = 2
+alignment = 1
+
+[node name="Pui" type="Label" parent="Control/Pui/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Pui"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gaina" type="PanelContainer" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 947.0
+offset_top = 268.0
+offset_right = 1102.0
+offset_bottom = 390.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sly3w")
+script = SubResource("GDScript_koqyl")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Gaina"]
+layout_mode = 2
+alignment = 1
+
+[node name="Gaina" type="Label" parent="Control/Gaina/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Gaina"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Caine" type="PanelContainer" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 72.0
+offset_top = 283.0
+offset_right = 227.0
+offset_bottom = 405.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ayfgw")
+script = SubResource("GDScript_vr564")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Caine"]
+layout_mode = 2
+alignment = 1
+
+[node name="Caine" type="Label" parent="Control/Caine/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Caine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cal" type="PanelContainer" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 148.0
+offset_top = 132.0
+offset_right = 303.0
+offset_bottom = 254.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tj2ml")
+script = SubResource("GDScript_x84mi")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Cal"]
+layout_mode = 2
+alignment = 1
+
+[node name="Cal" type="Label" parent="Control/Cal/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Cal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Zebra" type="PanelContainer" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 959.0
+offset_top = 56.0
+offset_right = 1114.0
+offset_bottom = 178.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q577t")
+script = SubResource("GDScript_07pcm")
+
+[node name="BoxContainer" type="BoxContainer" parent="Control/Zebra"]
+layout_mode = 2
+alignment = 1
+
+[node name="Zebra" type="Label" parent="Control/Zebra/BoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_apm4n")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ws37")
+text = "Zebra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Corect" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("28_dbaqk")
+
+[node name="Gresit" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("29_pexlp")
+
+[node name="Win" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("29_c4dcv")
+
+[node name="Dialog_Win" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("30_s2bx3")
+
+[node name="Coin" type="AudioStreamPlayer" parent="Control" groups=["Persist"]]
+stream = ExtResource("31_ruip3")
+
+[node name="Instructiuni" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_i4vql")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://llcwb0obrgmu"]
+
+[ext_resource type="Texture2D" uid="uid://cw28gwb0syqqc" path="res://assets/images/letter_u/nature.jpg" id="1_4hycq"]
+[ext_resource type="Script" path="res://scenes/scenes_letter_u/game_world.gd" id="1_5cg4m"]
+[ext_resource type="PackedScene" uid="uid://dy48rn2kh314m" path="res://scenes/scenes_letter_u/player.tscn" id="3_ivipr"]
+[ext_resource type="PackedScene" uid="uid://ikmnk6d4nl0g" path="res://scenes/scenes_letter_u/FallingObject.tscn" id="4_jxs24"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5dg51"]
+font_color = Color(1, 1, 0.133333, 0.870588)
+
+[node name="GameWorld" type="Node2D"]
+script = ExtResource("1_5cg4m")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(577.078, 326.134)
+scale = Vector2(2.07539, 2.48359)
+texture = ExtResource("1_4hycq")
+
+[node name="Player" parent="." instance=ExtResource("3_ivipr")]
+position = Vector2(-471, 1)
+speed = null
+player_size = null
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="FallingObject" parent="." instance=ExtResource("4_jxs24")]
+position = Vector2(239, 120)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 104.0
+offset_bottom = 55.0
+label_settings = SubResource("LabelSettings_5dg51")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

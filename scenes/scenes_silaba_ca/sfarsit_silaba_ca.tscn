@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://cewmqyh6nn0qy"]
+
+[ext_resource type="Script" path="res://scripts/scripts_silaba_ca/sfarsit_silaba_ca.gd" id="1_1aoiy"]
+[ext_resource type="Texture2D" uid="uid://b5uwk7qqsixdu" path="res://assets/images/silaba_ca/background.png" id="1_tlxe1"]
+[ext_resource type="Texture2D" uid="uid://xplpgibhgai7" path="res://assets/images/silaba_ca/banner2-removebg-preview.png" id="3_k5t14"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="4_bgeuj"]
+[ext_resource type="AudioStream" uid="uid://bbui8au08fcr7" path="res://assets/sounds/voices/silaba_ca/felicitari_silaba_ca.wav" id="4_pi7tx"]
+[ext_resource type="AudioStream" uid="uid://bhm58ml4vl2uf" path="res://assets/sounds/voices/sounds_letter_b/inapoi.wav" id="5_0qd5c"]
+
+[node name="SfarsitSilabaCa" type="Node2D"]
+script = ExtResource("1_1aoiy")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(689.25, 353.25)
+scale = Vector2(0.76981, 0.687012)
+texture = ExtResource("1_tlxe1")
+
+[node name="banner" type="Sprite2D" parent="."]
+position = Vector2(611, 412)
+scale = Vector2(1.45497, 1.11429)
+texture = ExtResource("3_k5t14")
+
+[node name="felicitari" type="Label" parent="."]
+offset_left = 484.0
+offset_top = 360.0
+offset_right = 731.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 40
+text = "Joc terminat!"
+
+[node name="inapoi" type="Button" parent="."]
+offset_left = 551.0
+offset_top = 479.0
+offset_right = 667.0
+offset_bottom = 539.0
+theme = ExtResource("4_bgeuj")
+text = "Înapoi"
+
+[node name="felicitari_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pi7tx")
+
+[node name="inapoi_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0qd5c")
+
+[connection signal="mouse_entered" from="inapoi" to="." method="_on_inapoi_mouse_entered"]
+[connection signal="pressed" from="inapoi" to="." method="_on_inapoi_pressed"]

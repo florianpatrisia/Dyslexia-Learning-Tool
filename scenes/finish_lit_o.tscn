@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://gnvfs18q1k01"]
+
+[ext_resource type="Script" path="res://scenes/finish_lit_o.gd" id="1_afq8p"]
+[ext_resource type="Texture2D" uid="uid://cyi1qtnc4yij5" path="res://assets/images/Joc-lit-e.png" id="2_eg0vw"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_px0bj"]
+[ext_resource type="Script" path="res://scenes/inapoi.gd" id="4_s05qq"]
+[ext_resource type="AudioStream" uid="uid://ca4dqdqsneemj" path="res://assets/sounds/voices/litera_o/litO.wav" id="5_jqk7k"]
+
+[node name="finish_lit_o" type="Node2D"]
+script = ExtResource("1_afq8p")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 1135.0
+offset_bottom = 654.0
+
+[node name="Joc-lit-e" type="Sprite2D" parent="Control"]
+position = Vector2(563, 309.5)
+scale = Vector2(1.91, 1.68325)
+texture = ExtResource("2_eg0vw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Joc-lit-e"]
+offset_left = -247.0
+offset_right = 6.0
+offset_bottom = 40.0
+
+[node name="Inapoi" type="Button" parent="Control/Joc-lit-e/RichTextLabel"]
+offset_left = 5.11518
+offset_top = -2.07931
+offset_right = 205.115
+offset_bottom = 39.9207
+theme = ExtResource("3_px0bj")
+text = "FELICITARI"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_s05qq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 752.0
+offset_top = 439.0
+offset_right = 1086.3
+offset_bottom = 612.0
+
+[node name="Inapoi" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_px0bj")
+text = "Intoarce-te"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_s05qq")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Finish" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_jqk7k")
+
+[connection signal="pressed" from="Control/VBoxContainer/Inapoi" to="Control/VBoxContainer/Inapoi" method="_on_pressed"]

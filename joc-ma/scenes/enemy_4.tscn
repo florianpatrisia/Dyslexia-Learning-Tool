@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8vl65myeq1t0"]
+
+[ext_resource type="PackedScene" uid="uid://cm23pqetbflrq" path="res://joc-ma/scenes/enemy.tscn" id="1_yk104"]
+[ext_resource type="Texture2D" uid="uid://cqtoqqujo2sfo" path="res://joc-ma/assets/textures/rama1.png" id="2_sft36"]
+
+[node name="Enemy4" instance=ExtResource("1_yk104")]
+hp = 1
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(1, 2.82812)
+scale = Vector2(0.169123, 0.176611)
+texture = ExtResource("2_sft36")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn1h4txiwe66h"]
+
+[ext_resource type="PackedScene" uid="uid://cm23pqetbflrq" path="res://joc-ma/scenes/enemy.tscn" id="1_hhqjm"]
+[ext_resource type="Texture2D" uid="uid://bmlecfef7qkan" path="res://joc-ma/assets/textures/casa1.png" id="2_r6wct"]
+
+[node name="FaraMa6" instance=ExtResource("1_hhqjm")]
+hp = 1
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(1, 1)
+scale = Vector2(0.142495, 0.16681)
+texture = ExtResource("2_r6wct")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -3)

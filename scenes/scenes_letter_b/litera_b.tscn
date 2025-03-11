@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cunambpa8geek"]
+
+[ext_resource type="Texture2D" uid="uid://cnhh0846bj5sb" path="res://assets/images/letter_b_scene/background.jpg" id="1_6x14i"]
+[ext_resource type="Script" path="res://scripts/scripts_letter_b/litera_b.gd" id="1_t0xxu"]
+[ext_resource type="AudioStream" uid="uid://b0v5qlkuitnxy" path="res://assets/sounds/voices/sounds_letter_b/incepe_jocul.wav" id="3_smqka"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_yeyht"]
+[ext_resource type="AudioStream" uid="uid://bhm58ml4vl2uf" path="res://assets/sounds/voices/sounds_letter_b/inapoi.wav" id="5_355vd"]
+[ext_resource type="AudioStream" uid="uid://cxqpnwx6gl8ra" path="res://assets/sounds/voices/sounds_letter_b/litera_b.wav" id="6_5u7pp"]
+
+[node name="LiteraB" type="Node2D"]
+position = Vector2(-4, 0)
+script = ExtResource("1_t0xxu")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(578, 328)
+scale = Vector2(0.645368, 0.637695)
+texture = ExtResource("1_6x14i")
+
+[node name="Inceput_joc_B" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_smqka")
+
+[node name="incepe_joc" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 475.0
+offset_right = 667.0
+offset_bottom = 517.0
+theme = ExtResource("3_yeyht")
+text = "Începe jocul"
+
+[node name="inapoi" type="Button" parent="."]
+offset_left = 513.0
+offset_top = 538.0
+offset_right = 647.0
+offset_bottom = 580.0
+theme = ExtResource("3_yeyht")
+text = "Înapoi"
+
+[node name="Inapoi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_355vd")
+
+[node name="Intro_Litera_B" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5u7pp")
+
+[connection signal="mouse_entered" from="incepe_joc" to="." method="_on_incepe_joc_mouse_entered"]
+[connection signal="pressed" from="incepe_joc" to="." method="_on_incepe_joc_pressed"]
+[connection signal="mouse_entered" from="inapoi" to="." method="_on_inapoi_mouse_entered"]
+[connection signal="pressed" from="inapoi" to="." method="_on_inapoi_pressed"]

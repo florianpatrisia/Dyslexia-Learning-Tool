@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://bnfs0loytgefe"]
+
+[ext_resource type="Script" path="res://scripts/scripts_letter_b/joc_litera_b.gd" id="1_cfqjl"]
+[ext_resource type="Texture2D" uid="uid://cnhh0846bj5sb" path="res://assets/images/letter_b_scene/background.jpg" id="1_ifcec"]
+[ext_resource type="Texture2D" uid="uid://ce48minwfg715" path="res://assets/images/letter_b_scene/albina.png" id="2_4uxq2"]
+[ext_resource type="Texture2D" uid="uid://dvlbktodimam7" path="res://assets/images/letter_b_scene/bard.png" id="3_ib8hq"]
+[ext_resource type="Texture2D" uid="uid://gus8lh147rnv" path="res://assets/images/letter_b_scene/buburuza.png" id="4_ert3r"]
+[ext_resource type="Texture2D" uid="uid://b44r3h3wuch1o" path="res://assets/images/letter_b_scene/bec.png" id="5_y1lma"]
+[ext_resource type="Texture2D" uid="uid://p7gpr8f34tlt" path="res://assets/images/letter_b_scene/urs.png" id="6_u4xh0"]
+[ext_resource type="Texture2D" uid="uid://gfcepjuftyy" path="res://assets/images/letter_b_scene/elefant.png" id="7_qu6kr"]
+[ext_resource type="Texture2D" uid="uid://tocachy12br5" path="res://assets/images/letter_b_scene/balon.png" id="8_4840p"]
+[ext_resource type="AudioStream" uid="uid://iqjkhsycyi5n" path="res://assets/sounds/voices/sounds_letter_b/explicatie_joc.wav" id="10_08tx1"]
+
+[node name="JocLiteraB" type="Node2D"]
+script = ExtResource("1_cfqjl")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(577, 322)
+scale = Vector2(0.646205, 0.631836)
+texture = ExtResource("1_ifcec")
+
+[node name="albina" type="Button" parent="."]
+offset_left = 60.0
+offset_top = 75.0
+offset_right = 552.0
+offset_bottom = 599.0
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 0
+icon = ExtResource("2_4uxq2")
+flat = true
+
+[node name="brad" type="Button" parent="."]
+offset_left = 830.0
+offset_top = 363.0
+offset_right = 1006.0
+offset_bottom = 671.0
+scale = Vector2(0.6, 0.6)
+icon = ExtResource("3_ib8hq")
+flat = true
+
+[node name="buburuza" type="Button" parent="."]
+offset_left = 352.0
+offset_top = 90.0
+offset_right = 867.0
+offset_bottom = 591.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("4_ert3r")
+flat = true
+
+[node name="bec" type="Button" parent="."]
+offset_left = 754.0
+offset_top = 237.0
+offset_right = 1226.0
+offset_bottom = 783.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("5_y1lma")
+flat = true
+
+[node name="urs" type="Button" parent="."]
+offset_left = 493.0
+offset_top = 473.0
+offset_right = 1092.0
+offset_bottom = 903.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("6_u4xh0")
+flat = true
+
+[node name="elefant" type="Button" parent="."]
+offset_left = 60.0
+offset_top = 460.0
+offset_right = 630.0
+offset_bottom = 912.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("7_qu6kr")
+flat = true
+
+[node name="balon" type="Button" parent="."]
+offset_left = 920.0
+offset_top = 4.0
+offset_right = 1318.0
+offset_bottom = 292.0
+scale = Vector2(0.8, 0.8)
+icon = ExtResource("8_4840p")
+flat = true
+
+[node name="Explicatie_joc_B" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_08tx1")

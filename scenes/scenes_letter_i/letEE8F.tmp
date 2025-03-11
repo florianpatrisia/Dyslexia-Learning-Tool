@@ -1,0 +1,158 @@
+[gd_scene load_steps=20 format=3 uid="uid://b6c5lgu7hifdv"]
+
+[ext_resource type="Script" path="res://scripts/scripts_letter_i/letter_i_start.gd" id="1_ytgwn"]
+[ext_resource type="Texture2D" uid="uid://1lraywdaqdmx" path="res://assets/images/letter_i_scene/fundal_joc.png" id="2_oyi6p"]
+[ext_resource type="Texture2D" uid="uid://db5a5yu35k5uh" path="res://assets/images/letter_i_scene/bunny.png" id="3_uxwvj"]
+[ext_resource type="Texture2D" uid="uid://coq170wlftryi" path="res://assets/images/letter_i_scene/cos.png" id="4_1kx6g"]
+[ext_resource type="Texture2D" uid="uid://csahwe2qhmqc" path="res://assets/images/letter_i_scene/i_mare.png" id="5_dvvc1"]
+[ext_resource type="Texture2D" uid="uid://cpxn1mti5oepy" path="res://assets/images/letter_i_scene/i_mic.png" id="6_5vmxj"]
+[ext_resource type="Texture2D" uid="uid://dkyi7x0s2tun4" path="res://assets/images/letter_i_scene/doi_i.png" id="7_ta8o2"]
+[ext_resource type="Texture2D" uid="uid://c4wvdvrb2tauq" path="res://assets/images/letter_i_scene/interzis.png" id="8_fcvik"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="9_37ffo"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="10_rfk5r"]
+[ext_resource type="Texture2D" uid="uid://bxmf6eu6b3ix8" path="res://assets/images/letter_i_scene/stea.png" id="11_bil0w"]
+[ext_resource type="AudioStream" uid="uid://cs80xrqy6d0ac" path="res://assets/sounds/voices/sounds_letter_i/wav/Ieși din joc .wav" id="12_yf0xi"]
+[ext_resource type="AudioStream" uid="uid://dajn4f438s2ah" path="res://assets/sounds/voices/sounds_letter_i/wav/Felicitări ai învăța.wav" id="13_nkcrg"]
+[ext_resource type="AudioStream" uid="uid://c3hxnvvmug633" path="res://assets/sounds/voices/sounds_letter_i/wav/Iepurașul Ipo are ne.wav" id="14_1xa3f"]
+[ext_resource type="AudioStream" uid="uid://dxurxufbf8ivj" path="res://assets/sounds/voices/sounds_letter_i/wav/Corect .wav" id="15_5uflq"]
+[ext_resource type="AudioStream" uid="uid://d3p5bb67ko7df" path="res://assets/sounds/voices/sounds_letter_i/wav/Încearcă din nou .wav" id="16_2ljr1"]
+[ext_resource type="AudioStream" uid="uid://otp0hn7754hr" path="res://assets/sounds/voices/sounds_letter_i/wav/Într o pădure fermec.wav" id="17_ape1n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_by4lg"]
+texture = ExtResource("2_oyi6p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mpj5e"]
+
+[node name="LetterIStart" type="Node2D"]
+script = ExtResource("1_ytgwn")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = 6.0
+offset_right = 1149.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_by4lg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(376, 320)
+scale = Vector2(0.675, 0.552265)
+texture = ExtResource("3_uxwvj")
+
+[node name="cos_i_mare" type="Sprite2D" parent="."]
+position = Vector2(402.613, 547.135)
+scale = Vector2(0.164231, 0.159085)
+texture = ExtResource("4_1kx6g")
+
+[node name="cos_i_mic" type="Sprite2D" parent="."]
+position = Vector2(504, 569)
+scale = Vector2(0.168834, 0.178516)
+texture = ExtResource("4_1kx6g")
+
+[node name="cos_non_i" type="Sprite2D" parent="."]
+position = Vector2(605, 585)
+scale = Vector2(0.173057, 0.17593)
+texture = ExtResource("4_1kx6g")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(401.41, 560.882)
+scale = Vector2(0.320117, 0.253351)
+texture = ExtResource("5_dvvc1")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(503, 578)
+scale = Vector2(0.285204, 0.229596)
+texture = ExtResource("6_5vmxj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(604, 596)
+scale = Vector2(0.185858, 0.212153)
+texture = ExtResource("7_ta8o2")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(604, 599)
+scale = Vector2(0.111258, 0.101726)
+texture = ExtResource("8_fcvik")
+
+[node name="Button_mare" type="Button" parent="."]
+offset_left = 365.0
+offset_top = 513.0
+offset_right = 436.0
+offset_bottom = 595.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxTexture_mpj5e")
+
+[node name="Button_mic" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 534.0
+offset_right = 538.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxTexture_mpj5e")
+
+[node name="Button_non" type="Button" parent="."]
+offset_left = 568.0
+offset_top = 549.0
+offset_right = 639.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxTexture_mpj5e")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 466.0
+offset_top = 138.0
+offset_right = 798.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_37ffo")
+theme_override_font_sizes/font_size = 25
+text = "Felicitări, ai învățat litera I!"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 490.0
+offset_top = 177.0
+offset_right = 775.0
+offset_bottom = 219.0
+theme = ExtResource("10_rfk5r")
+text = "Înapoi la început"
+
+[node name="stea" type="Sprite2D" parent="."]
+position = Vector2(656.375, 229.5)
+scale = Vector2(0.548299, 0.546683)
+texture = ExtResource("11_bil0w")
+
+[node name="artificii" type="CPUParticles2D" parent="."]
+position = Vector2(641, 212)
+emitting = false
+amount = 20
+lifetime = 1.5
+one_shot = true
+emission_shape = 2
+emission_sphere_radius = 128.0
+gravity = Vector2(0, -1000)
+scale_amount_min = 4.5
+scale_amount_max = 10.0
+color = Color(1, 0.870588, 0.678431, 1)
+
+[node name="iesi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_yf0xi")
+
+[node name="felicitari" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_nkcrg")
+
+[node name="misiunea" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_1xa3f")
+
+[node name="corect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_5uflq")
+
+[node name="gresit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_2ljr1")
+
+[node name="povestea" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_ape1n")
+
+[connection signal="pressed" from="Button_mare" to="." method="_on_button_mare_pressed"]
+[connection signal="pressed" from="Button_mic" to="." method="_on_button_mic_pressed"]
+[connection signal="pressed" from="Button_non" to="." method="_on_button_non_pressed"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]

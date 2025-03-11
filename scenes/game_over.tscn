@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://jmhi0m25ai08"]
+
+[ext_resource type="Script" path="res://scenes/game_over_o.gd" id="1_l5s5v"]
+[ext_resource type="Texture2D" uid="uid://bnxvvvoxtgt5n" path="res://assets/images/loose.jpg" id="1_xm7ah"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="2_ekd6k"]
+[ext_resource type="Script" path="res://scenes/inapoi.gd" id="3_6duui"]
+[ext_resource type="AudioStream" uid="uid://bfdfqi74suqwc" path="res://assets/sounds/voices/litera_o/game-over-o.wav" id="5_nc3he"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_l5s5v")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1123.0
+offset_bottom = 653.0
+
+[node name="Loose" type="Sprite2D" parent="Control"]
+clip_children = 2
+position = Vector2(582, 331)
+scale = Vector2(1.11523, 0.644531)
+texture = ExtResource("1_xm7ah")
+flip_h = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 752.0
+offset_top = 439.0
+offset_right = 1086.3
+offset_bottom = 612.0
+
+[node name="Inapoi" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ekd6k")
+text = "Intoarce-te"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_6duui")
+
+[node name="DinNou" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ekd6k")
+text = "Din nou"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_6duui")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="finish_lit_o" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_nc3he")
+
+[connection signal="pressed" from="Control/VBoxContainer/Inapoi" to="." method="_on_inapoi_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/DinNou" to="Control/VBoxContainer/DinNou" method="_on_pressed"]

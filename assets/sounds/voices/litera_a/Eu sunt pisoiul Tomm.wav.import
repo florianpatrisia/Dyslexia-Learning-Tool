@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dicxxm4jboodi"
+path="res://.godot/imported/Eu sunt pisoiul Tomm.wav-fa7bbdf3041895496e090cf0a11e1592.sample"
+
+[deps]
+
+source_file="res://assets/sounds/voices/litera_a/Eu sunt pisoiul Tomm.wav"
+dest_files=["res://.godot/imported/Eu sunt pisoiul Tomm.wav-fa7bbdf3041895496e090cf0a11e1592.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

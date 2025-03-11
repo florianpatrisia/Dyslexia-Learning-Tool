@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://ch521rss774yg"]
+
+[ext_resource type="Script" path="res://scripts/scripts_letter_s/letter_s_start.gd" id="1_ryukl"]
+[ext_resource type="Texture2D" uid="uid://ey1h0rcfbbu5" path="res://assets/images/letter_s_scene/start-page.png" id="2_12o61"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_kep7l"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="4_b7fup"]
+[ext_resource type="AudioStream" uid="uid://bjfgriw0lcfmr" path="res://assets/sounds/voices/sounds_letter_s/introduction.wav" id="4_f8et6"]
+[ext_resource type="Texture2D" uid="uid://d072tppeo8rhd" path="res://assets/images/letter_s_scene/snake_closed.png" id="5_adwk6"]
+[ext_resource type="AudioStream" uid="uid://cj46nxruthpoa" path="res://assets/sounds/voices/sounds_letter_s/play.wav" id="5_rrtqs"]
+[ext_resource type="AudioStream" uid="uid://ctptaarcmln2s" path="res://assets/sounds/voices/sounds_letter_s/exit.wav" id="6_vfrdm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5hph"]
+texture = ExtResource("2_12o61")
+
+[node name="LetterSStart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ryukl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_k5hph")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 13.0
+offset_right = 178.0
+offset_bottom = 84.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_b7fup")
+theme_override_font_sizes/font_size = 40
+text = "Învață litera S!"
+horizontal_alignment = 1
+
+[node name="Snake" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -109.0
+offset_right = 164.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_adwk6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -276.0
+offset_top = -98.0
+offset_right = 274.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Play" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_kep7l")
+text = "Începe jocul"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Exit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_kep7l")
+text = "Înapoi"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Introduction" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f8et6")
+
+[node name="Play" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rrtqs")
+
+[node name="Exit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_vfrdm")
+
+[connection signal="ready" from="Label" to="." method="_on_label_ready"]
+[connection signal="mouse_entered" from="HBoxContainer/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="HBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="finished" from="Introduction" to="." method="_on_introduction_finished"]
+[connection signal="finished" from="Play" to="." method="_on_sound_finished"]
+[connection signal="finished" from="Exit" to="." method="_on_sound_finished"]

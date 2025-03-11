@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cg67fj1wpkmyb"]
+
+[ext_resource type="Texture2D" uid="uid://b5uwk7qqsixdu" path="res://assets/images/silaba_ca/background.png" id="1_6iwdo"]
+[ext_resource type="Script" path="res://scripts/scripts_silaba_ca/silaba_ca.gd" id="1_qvc4i"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_w33on"]
+[ext_resource type="AudioStream" uid="uid://bhm58ml4vl2uf" path="res://assets/sounds/voices/sounds_letter_b/inapoi.wav" id="4_c7c8b"]
+[ext_resource type="AudioStream" uid="uid://b0v5qlkuitnxy" path="res://assets/sounds/voices/sounds_letter_b/incepe_jocul.wav" id="5_ik6jp"]
+[ext_resource type="AudioStream" uid="uid://b1yo8vmlc6c05" path="res://assets/sounds/voices/silaba_ca/poveste_silaba_ca.wav" id="6_v3wk5"]
+[ext_resource type="Texture2D" uid="uid://xplpgibhgai7" path="res://assets/images/silaba_ca/banner2-removebg-preview.png" id="7_bqgct"]
+
+[node name="SilabaCa" type="Node2D"]
+script = ExtResource("1_qvc4i")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(689, 339)
+scale = Vector2(0.768973, 0.660156)
+texture = ExtResource("1_6iwdo")
+
+[node name="incepe_jocul" type="Button" parent="."]
+offset_left = 465.0
+offset_top = 461.0
+offset_right = 680.0
+offset_bottom = 507.0
+theme = ExtResource("3_w33on")
+text = "Începe jocul"
+
+[node name="inapoi" type="Button" parent="."]
+offset_left = 505.0
+offset_top = 526.0
+offset_right = 641.0
+offset_bottom = 576.0
+theme = ExtResource("3_w33on")
+text = "Înapoi"
+
+[node name="Inapoi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_c7c8b")
+
+[node name="Incepe_Jocul" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ik6jp")
+
+[node name="poveste_silaba_ca" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_v3wk5")
+
+[node name="banner" type="Sprite2D" parent="."]
+position = Vector2(589.5, 382)
+scale = Vector2(1.15242, 1.08571)
+texture = ExtResource("7_bqgct")
+
+[node name="silaba_ca" type="Label" parent="."]
+offset_left = 476.0
+offset_top = 344.0
+offset_right = 708.0
+offset_bottom = 386.0
+theme_override_font_sizes/font_size = 30
+text = "Învata silaba ca!"
+
+[connection signal="mouse_entered" from="incepe_jocul" to="." method="_on_incepe_jocul_mouse_entered"]
+[connection signal="pressed" from="incepe_jocul" to="." method="_on_incepe_jocul_pressed"]
+[connection signal="mouse_entered" from="inapoi" to="." method="_on_inapoi_mouse_entered"]
+[connection signal="pressed" from="inapoi" to="." method="_on_inapoi_pressed"]

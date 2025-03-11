@@ -1,0 +1,137 @@
+[gd_scene load_steps=15 format=3 uid="uid://bwt1y3jrh86uf"]
+
+[ext_resource type="Script" path="res://scenes/silaba_ie.gd" id="1_kxcg4"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="2_73lfl"]
+[ext_resource type="Texture2D" uid="uid://k1d4h6gyp7xb" path="res://assets/images/silaba_ie.jpg" id="2_t87iu"]
+[ext_resource type="StyleBox" uid="uid://bxs6qut2vnkd0" path="res://assets/styles/label.tres" id="3_ugks0"]
+[ext_resource type="Texture2D" uid="uid://bl8fnpu0wo3cw" path="res://assets/images/hint.png" id="3_wwwwu"]
+[ext_resource type="AudioStream" uid="uid://blm57xbisyxfl" path="res://assets/sounds/voices/silaba_ie/ie_mici.wav" id="4_7fmnc"]
+[ext_resource type="AudioStream" uid="uid://cudsbulf0bk2y" path="res://assets/sounds/voices/silaba_ie/ie_mari.wav" id="5_m6q7a"]
+[ext_resource type="AudioStream" uid="uid://cdhsktfadr6a8" path="res://assets/sounds/voices/silaba_ie/ie_indicatii.wav" id="6_nvi24"]
+[ext_resource type="StyleBox" uid="uid://dwsgavgsbsl27" path="res://assets/styles/label2.tres" id="7_f13f8"]
+[ext_resource type="AudioStream" uid="uid://b3p8o82t3dc82" path="res://assets/sounds/voices/ding.wav" id="8_aptmw"]
+[ext_resource type="AudioStream" uid="uid://cu4ue3flfemcx" path="res://assets/sounds/voices/silaba_ie_final.wav" id="9_ipxu1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3wyn"]
+texture = ExtResource("2_t87iu")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h2nxc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qean8"]
+texture = ExtResource("3_wwwwu")
+
+[node name="Control2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kxcg4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_y3wyn")
+
+[node name="Hint" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 134.0
+offset_top = 319.0
+offset_right = 219.0
+offset_bottom = 401.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h2nxc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qean8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qean8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qean8")
+
+[node name="Hint_Silabe" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -473.0
+offset_top = 153.0
+offset_right = -319.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 50
+
+[node name="IE_Mic" type="Label" parent="Hint_Silabe"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_73lfl")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_ugks0")
+text = "ie"
+
+[node name="IE_Mare" type="Label" parent="Hint_Silabe"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_73lfl")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_ugks0")
+text = "IE"
+
+[node name="ie" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7fmnc")
+
+[node name="IE" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_m6q7a")
+
+[node name="Indicatii" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_nvi24")
+autoplay = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 286.0
+offset_top = 113.0
+offset_right = 367.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Cuvant" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_73lfl")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("7_f13f8")
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Silabe" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_aptmw")
+
+[node name="Final" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ipxu1")
+
+[connection signal="mouse_entered" from="Hint" to="." method="_on_hint_mouse_entered"]
+[connection signal="mouse_exited" from="Hint" to="." method="_on_hint_mouse_exited"]
+[connection signal="mouse_entered" from="Hint_Silabe/IE_Mic" to="." method="_on_ie_mic_mouse_entered"]
+[connection signal="mouse_entered" from="Hint_Silabe/IE_Mare" to="." method="_on_ie_mare_mouse_entered"]
+[connection signal="finished" from="Indicatii" to="." method="_on_indicatii_finished"]
+[connection signal="finished" from="Final" to="." method="_on_final_finished"]

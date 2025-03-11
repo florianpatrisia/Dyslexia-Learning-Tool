@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://b54nldhh57vip"]
+
+[ext_resource type="Texture2D" uid="uid://b5uwk7qqsixdu" path="res://assets/images/silaba_ca/background.png" id="1_g2i5y"]
+[ext_resource type="Script" path="res://scripts/scripts_silaba_ca/joc_silaba_ca.gd" id="1_vv2p4"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_cvf5g"]
+[ext_resource type="Texture2D" uid="uid://xplpgibhgai7" path="res://assets/images/silaba_ca/banner2-removebg-preview.png" id="4_eggja"]
+[ext_resource type="AudioStream" uid="uid://ddct7k407d4ub" path="res://assets/sounds/voices/silaba_ca/corect-voice.wav" id="5_fb4dg"]
+[ext_resource type="AudioStream" uid="uid://da8dlocluran6" path="res://assets/sounds/voices/silaba_ca/gresit-voice.wav" id="6_11os0"]
+[ext_resource type="AudioStream" uid="uid://dse20c2oopyux" path="res://assets/sounds/voices/silaba_ca/explicatie_joc_silaba_ca.wav" id="7_viisd"]
+
+[node name="JocSilabaCa" type="Node2D"]
+script = ExtResource("1_vv2p4")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(688, 339)
+scale = Vector2(0.768973, 0.662109)
+texture = ExtResource("1_g2i5y")
+
+[node name="Banner" type="Sprite2D" parent="."]
+position = Vector2(591, 366)
+scale = Vector2(1.62587, 1.13929)
+texture = ExtResource("4_eggja")
+
+[node name="WordLabel" type="Label" parent="."]
+offset_left = 509.0
+offset_top = 312.0
+offset_right = 657.0
+offset_bottom = 381.0
+theme_override_font_sizes/font_size = 50
+text = "LABEL"
+
+[node name="corect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fb4dg")
+
+[node name="gresit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_11os0")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+offset_left = 492.0
+offset_top = 407.0
+offset_right = 684.0
+offset_bottom = 501.0
+theme = ExtResource("3_cvf5g")
+theme_override_constants/separation = 15
+
+[node name="explicatie_joc" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_viisd")

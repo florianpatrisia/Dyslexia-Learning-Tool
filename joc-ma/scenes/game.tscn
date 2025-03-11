@@ -1,0 +1,105 @@
+[gd_scene load_steps=26 format=3 uid="uid://bxuuwmlma1xmm"]
+
+[ext_resource type="Script" path="res://joc-ma/scripts/game.gd" id="1_hlah8"]
+[ext_resource type="PackedScene" uid="uid://bmqidkxhp63mq" path="res://joc-ma/scenes/player.tscn" id="2_oqgyc"]
+[ext_resource type="PackedScene" uid="uid://bbe6ufx0jbub" path="res://joc-ma/scenes/enemy2.tscn" id="2_whhd7"]
+[ext_resource type="PackedScene" uid="uid://dopsftcvdv8jj" path="res://joc-ma/scenes/enemy3.tscn" id="3_3lcd8"]
+[ext_resource type="PackedScene" uid="uid://cm23pqetbflrq" path="res://joc-ma/scenes/enemy.tscn" id="4_8xjro"]
+[ext_resource type="AudioStream" uid="uid://cyyydy05fivsp" path="res://joc-ma/assets/audio/laser.ogg" id="4_8y633"]
+[ext_resource type="PackedScene" uid="uid://dniho73boedhe" path="res://joc-ma/scenes/hud.tscn" id="4_pq1a5"]
+[ext_resource type="PackedScene" uid="uid://c8vl65myeq1t0" path="res://joc-ma/scenes/enemy_4.tscn" id="5_axcct"]
+[ext_resource type="AudioStream" uid="uid://137oamlwx2hu" path="res://joc-ma/assets/audio/hit.wav" id="5_f6dy0"]
+[ext_resource type="PackedScene" uid="uid://c6uejmh8c7koe" path="res://joc-ma/scenes/game_over_screen.tscn" id="5_wfc6m"]
+[ext_resource type="PackedScene" uid="uid://bng0ujwf7bknl" path="res://joc-ma/scenes/enemy_5.tscn" id="6_0maiq"]
+[ext_resource type="Texture2D" uid="uid://cjqit2q27aiur" path="res://joc-ma/assets/textures/purple.png" id="6_mxb3t"]
+[ext_resource type="AudioStream" uid="uid://b1wymalc4ru36" path="res://joc-ma/assets/audio/explode.wav" id="6_tmg8f"]
+[ext_resource type="PackedScene" uid="uid://cmbeb4icp71di" path="res://joc-ma/scenes/diver_enemy.tscn" id="7_8xh0r"]
+[ext_resource type="Texture2D" uid="uid://dfgo50t0a2vci" path="res://joc-ma/assets/textures/star.png" id="7_p4ya3"]
+[ext_resource type="PackedScene" uid="uid://cw3eh1e7sxk2o" path="res://joc-ma/scenes/fara_ma.tscn" id="8_wkbu2"]
+[ext_resource type="PackedScene" uid="uid://drh6pcya3gf75" path="res://joc-ma/scenes/fara_ma_2.tscn" id="9_kh5sn"]
+[ext_resource type="PackedScene" uid="uid://kl057bdc20ub" path="res://joc-ma/scenes/fara_ma_3.tscn" id="10_y2t8b"]
+[ext_resource type="PackedScene" uid="uid://bf6wi7qecgh4f" path="res://joc-ma/scenes/fara_ma_4.tscn" id="11_3igps"]
+[ext_resource type="PackedScene" uid="uid://dcp15jok7jus0" path="res://joc-ma/scenes/fara_ma_5.tscn" id="12_s6uy4"]
+[ext_resource type="PackedScene" uid="uid://bn1h4txiwe66h" path="res://joc-ma/scenes/fara_ma_6.tscn" id="13_6wci1"]
+[ext_resource type="AudioStream" uid="uid://52lh75v6um7m" path="res://joc-ma/assets/audio/explanation.wav" id="17_fyiju"]
+[ext_resource type="AudioStream" uid="uid://b2a83y85owgkr" path="res://joc-ma/assets/audio/Felicitari.wav" id="18_evdma"]
+[ext_resource type="AudioStream" uid="uid://sg657wf0jxfe" path="res://joc-ma/assets/audio/aiPierdut.wav" id="19_rdew0"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_owlid"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(270, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = -1000.0
+initial_velocity_max = -1000.0
+gravity = Vector3(0, 0, 0)
+
+[node name="Game" type="Node2D" groups=["enemy_nonlethal"]]
+script = ExtResource("1_hlah8")
+enemy_scenes = Array[PackedScene]([ExtResource("2_whhd7"), ExtResource("3_3lcd8"), ExtResource("4_8xjro"), ExtResource("5_axcct"), ExtResource("6_0maiq"), ExtResource("7_8xh0r"), ExtResource("8_wkbu2"), ExtResource("9_kh5sn"), ExtResource("10_y2t8b"), ExtResource("11_3igps"), ExtResource("12_s6uy4"), ExtResource("13_6wci1")])
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="LaserSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_8y633")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_f6dy0")
+
+[node name="ExplodeSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("6_tmg8f")
+
+[node name="Explain" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("17_fyiju")
+
+[node name="AiCastigat" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("18_evdma")
+
+[node name="AiPierdut" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("19_rdew0")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UILayer" instance=ExtResource("4_pq1a5")]
+
+[node name="GameOverScreen" parent="UILayer" instance=ExtResource("5_wfc6m")]
+visible = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0, 960)
+
+[node name="PurpleStars" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+texture = ExtResource("6_mxb3t")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 540, 960)
+
+[node name="StarParticleEffect" type="GPUParticles2D" parent="."]
+position = Vector2(270, -50)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_owlid")
+texture = ExtResource("7_p4ya3")
+lifetime = 1.25
+preprocess = 5.0
+
+[node name="EnemySpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("2_oqgyc")]
+position = Vector2(444, 263)
+
+[node name="PlayerSpawnPos" type="Marker2D" parent="."]
+position = Vector2(270, 850)
+
+[node name="LaserContainer" type="Node2D" parent="."]
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="enemy_nonlethal" type="Node2D" parent="."]
+
+[connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

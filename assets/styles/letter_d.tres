@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cib3kf8ppaibr"]
+
+[ext_resource type="Texture2D" uid="uid://c1v1pvbnd286e" path="res://assets/sprites/litere.png" id="1_atlhm"]
+
+[resource]
+texture = ExtResource("1_atlhm")
+region_rect = Rect2(492, 9, 151, 162)

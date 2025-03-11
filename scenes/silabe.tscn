@@ -1,0 +1,137 @@
+[gd_scene load_steps=11 format=3 uid="uid://81fb8wwbx0s3"]
+
+[ext_resource type="Texture2D" uid="uid://kymrc4icq2ok" path="res://assets/images/silabe.png" id="1_6mxt1"]
+[ext_resource type="Script" path="res://scripts/silabe.gd" id="1_c2hwd"]
+[ext_resource type="Texture2D" uid="uid://d10kbbwr7i18v" path="res://assets/images/arrow.png" id="2_wyy3n"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="4_2mkwg"]
+[ext_resource type="StyleBox" uid="uid://c3fg2qekqd7c2" path="res://assets/styles/button_pressed.tres" id="5_4jfyn"]
+[ext_resource type="StyleBox" uid="uid://hsa3421qy1m4" path="res://assets/styles/silabe_style.tres" id="6_ae1qg"]
+[ext_resource type="Script" path="res://scripts/scripts_silaba_ca/button_ca.gd" id="7_a2ys5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_diiv2"]
+texture = ExtResource("1_6mxt1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0s2x"]
+bg_color = Color(0.788365, 0.184431, 0.908804, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abwir"]
+bg_color = Color(0.971745, 0.274609, 0.615281, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c2hwd")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_diiv2")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(120, 144)
+rotation = 0.785398
+scale = Vector2(0.2, 0.13725)
+texture = ExtResource("2_wyy3n")
+
+[node name="Arrow2" type="Sprite2D" parent="."]
+position = Vector2(229, 94)
+rotation = 1.57079
+scale = Vector2(0.2, 0.13725)
+texture = ExtResource("2_wyy3n")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -116.0
+offset_right = 154.0
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("4_2mkwg")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_b0s2x")
+theme_override_styles/pressed = ExtResource("5_4jfyn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_abwir")
+text = "Înapoi"
+
+[node name="Silabe" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Silaba_MA" type="Button" parent="Silabe"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 144.0
+offset_right = 85.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("6_ae1qg")
+theme_override_styles/pressed = ExtResource("6_ae1qg")
+theme_override_styles/normal = ExtResource("6_ae1qg")
+text = "ma"
+
+[node name="Silaba_IE" type="Button" parent="Silabe"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 82.0
+offset_right = 185.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("6_ae1qg")
+theme_override_styles/pressed = ExtResource("6_ae1qg")
+theme_override_styles/normal = ExtResource("6_ae1qg")
+text = "ie"
+
+[node name="Silaba_CA" type="Button" parent="Silabe"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.1
+offset_left = 269.0
+offset_top = 72.0
+offset_right = 298.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("6_ae1qg")
+theme_override_styles/pressed = ExtResource("6_ae1qg")
+theme_override_styles/normal = ExtResource("6_ae1qg")
+text = "ca
+"
+script = ExtResource("7_a2ys5")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Silabe/Silaba_MA" to="." method="_on_silaba_ma_pressed"]
+[connection signal="pressed" from="Silabe/Silaba_IE" to="." method="_on_silaba_ie_pressed"]
+[connection signal="pressed" from="Silabe/Silaba_CA" to="." method="_on_silaba_ca_pressed"]

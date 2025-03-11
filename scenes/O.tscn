@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfwa6g3ckwj7d"]
+
+[ext_resource type="Script" path="res://scenes/o.gd" id="1_6epd7"]
+[ext_resource type="Texture2D" uid="uid://cyy1eej1srvrm" path="res://assets/images/Joc_fundal.png" id="1_du886"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="2_57x7e"]
+[ext_resource type="Script" path="res://scripts/playO.gd" id="3_hdqjr"]
+[ext_resource type="Script" path="res://scenes/inapoi.gd" id="4_lhxqf"]
+[ext_resource type="AudioStream" uid="uid://ck4euwxttq5kn" path="res://assets/sounds/voices/litera_o/ExplainLiteraO.wav" id="6_lb1n5"]
+
+[node name="O" type="Node2D"]
+script = ExtResource("1_6epd7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1159.0
+offset_bottom = 651.0
+
+[node name="JocFundal" type="Sprite2D" parent="Control"]
+position = Vector2(581, 324)
+scale = Vector2(1.90017, 1.58025)
+texture = ExtResource("1_du886")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 752.0
+offset_top = 439.0
+offset_right = 1086.3
+offset_bottom = 612.0
+
+[node name="Play" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_57x7e")
+text = "Incepe jocul"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_hdqjr")
+
+[node name="Inapoi" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_57x7e")
+text = "Intoarce-te"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_lhxqf")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="ExplainLiteraO" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("6_lb1n5")
+
+[connection signal="pressed" from="Control/VBoxContainer/Play" to="Control/VBoxContainer/Play" method="_on_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Inapoi" to="Control/VBoxContainer/Inapoi" method="_on_pressed"]

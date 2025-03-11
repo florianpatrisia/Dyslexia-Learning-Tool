@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://otp0hn7754hr"
+path="res://.godot/imported/Într o pădure fermec.wav-7fb3b62fba3a4c7f8eb28da09e7e92af.sample"
+
+[deps]
+
+source_file="res://assets/sounds/voices/sounds_letter_i/wav/Într o pădure fermec.wav"
+dest_files=["res://.godot/imported/Într o pădure fermec.wav-7fb3b62fba3a4c7f8eb28da09e7e92af.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

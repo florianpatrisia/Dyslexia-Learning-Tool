@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bng0ujwf7bknl"]
+
+[ext_resource type="PackedScene" uid="uid://cm23pqetbflrq" path="res://joc-ma/scenes/enemy.tscn" id="1_ttpft"]
+[ext_resource type="Texture2D" uid="uid://bsuhje6c8f8vq" path="res://joc-ma/assets/textures/masa1.png" id="2_gbnmf"]
+
+[node name="Enemy5" instance=ExtResource("1_ttpft")]
+hp = 1
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(0.999996, -1)
+scale = Vector2(0.192434, 0.226539)
+texture = ExtResource("2_gbnmf")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-1, 0)

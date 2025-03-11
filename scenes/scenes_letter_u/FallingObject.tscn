@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ikmnk6d4nl0g"]
+
+[ext_resource type="Script" path="res://scenes/scenes_letter_u/FallingObject.gd" id="1_curm3"]
+[ext_resource type="Texture2D" uid="uid://cyqnwd00ip6ei" path="res://assets/images/letter_u/uu.PNG" id="2_gew0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxfsd"]
+size = Vector2(66, 83)
+
+[node name="FallingObject" type="Area2D"]
+position = Vector2(184, 45)
+script = ExtResource("1_curm3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.5, -0.249998)
+scale = Vector2(0.130859, 0.124023)
+texture = ExtResource("2_gew0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -1.5)
+shape = SubResource("RectangleShape2D_oxfsd")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

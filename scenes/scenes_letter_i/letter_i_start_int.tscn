@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://carbl75gnr8eg"]
+
+[ext_resource type="Texture2D" uid="uid://ey1h0rcfbbu5" path="res://assets/images/letter_s_scene/start-page.png" id="1_8e5ev"]
+[ext_resource type="Script" path="res://scripts/scripts_letter_i/letter_i_start_int.gd" id="1_66mp3"]
+[ext_resource type="Texture2D" uid="uid://db5a5yu35k5uh" path="res://assets/images/letter_i_scene/bunny.png" id="3_f0kit"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="3_rhfxi"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="4_hmqpd"]
+[ext_resource type="AudioStream" uid="uid://otp0hn7754hr" path="res://assets/sounds/voices/sounds_letter_i/wav/Într o pădure fermec.wav" id="6_5exi2"]
+[ext_resource type="AudioStream" uid="uid://cjpaoxjqjiqh8" path="res://assets/sounds/voices/sounds_letter_i/play.wav" id="6_xtjgm"]
+[ext_resource type="AudioStream" uid="uid://chqcadw6vqeei" path="res://assets/sounds/voices/sounds_letter_i/exit.wav" id="7_5op2r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1orv"]
+texture = ExtResource("1_8e5ev")
+
+[node name="LetterIStartInt" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 1.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_66mp3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -9.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.992698, 0.995776)
+theme_override_styles/panel = SubResource("StyleBoxTexture_f1orv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 121.0
+offset_right = 727.0
+offset_bottom = 421.0
+scale = Vector2(1.00702, 1.3)
+pivot_offset = Vector2(-134.332, -2.76149)
+texture = ExtResource("3_f0kit")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.325
+anchor_right = 0.657
+anchor_bottom = 0.108
+offset_left = 18.6
+offset_top = 11.0
+offset_right = 19.136
+offset_bottom = -1.984
+pivot_offset = Vector2(50, 33)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_rhfxi")
+theme_override_font_sizes/font_size = 40
+text = "Învață litera I!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 550.0
+offset_right = 626.0
+offset_bottom = 592.0
+scale = Vector2(1.64014, 1.45638)
+
+[node name="play" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_hmqpd")
+text = "   Începe jocul   "
+
+[node name="exit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_hmqpd")
+text = "       Înapoi       "
+
+[node name="Introduction" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5exi2")
+
+[node name="Play" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xtjgm")
+
+[node name="Exit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5op2r")
+
+[connection signal="ready" from="TextureRect" to="." method="_on_texture_rect_ready"]
+[connection signal="ready" from="Label" to="." method="_on_label_ready"]
+[connection signal="mouse_entered" from="HBoxContainer/play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="HBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="HBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="finished" from="Introduction" to="." method="_on_introduction_finished"]
+[connection signal="finished" from="Play" to="." method="_on_play_finished"]
+[connection signal="finished" from="Exit" to="." method="_on_exit_finished"]

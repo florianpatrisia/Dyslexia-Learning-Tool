@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cuynpvoh0ky5p"]
+
+[ext_resource type="Texture2D" uid="uid://c1v1pvbnd286e" path="res://assets/sprites/litere.png" id="1_rikno"]
+
+[resource]
+texture = ExtResource("1_rikno")
+region_rect = Rect2(168, 4, 153, 162)
+modulate_color = Color(0.172549, 1, 1, 0.709804)

@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://7wx3j4ughiow"]
+
+[ext_resource type="Script" path="res://scripts/letter_c_start.gd" id="1_bvffv"]
+[ext_resource type="Texture2D" uid="uid://rbnvbwttsj6g" path="res://assets/images/field.jpg" id="1_fi20k"]
+[ext_resource type="AudioStream" uid="uid://brvble8dpm1nf" path="res://assets/sounds/voices/start_litera_c.wav" id="3_fd6f4"]
+
+[node name="Letter_C_start" type="Node2D"]
+script = ExtResource("1_bvffv")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+light_mask = 0
+scale = Vector2(1.11, 1.11)
+texture = ExtResource("1_fi20k")
+centered = false
+
+[node name="Intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fd6f4")
+
+[node name="Start" type="Button" parent="Intro"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -35.5
+offset_right = 84.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "START"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 363.0
+offset_top = -18.0
+offset_right = 605.0
+offset_bottom = 255.0
+theme_override_font_sizes/font_size = 200
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1

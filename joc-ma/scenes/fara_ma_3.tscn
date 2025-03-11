@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://kl057bdc20ub"]
+
+[ext_resource type="PackedScene" uid="uid://cm23pqetbflrq" path="res://joc-ma/scenes/enemy.tscn" id="1_h2feo"]
+[ext_resource type="Texture2D" uid="uid://cixvbebhyl18h" path="res://joc-ma/assets/textures/toba1.png" id="2_x2nwk"]
+
+[node name="FaraMa3" instance=ExtResource("1_h2feo")]
+hp = 1
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2(3, -2)
+scale = Vector2(0.205347, 0.203705)
+texture = ExtResource("2_x2nwk")

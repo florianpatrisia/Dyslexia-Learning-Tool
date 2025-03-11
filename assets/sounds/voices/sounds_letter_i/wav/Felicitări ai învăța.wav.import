@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dajn4f438s2ah"
+path="res://.godot/imported/Felicitări ai învăța.wav-d591f23de6350f3c80141ba4a8b0e7dc.sample"
+
+[deps]
+
+source_file="res://assets/sounds/voices/sounds_letter_i/wav/Felicitări ai învăța.wav"
+dest_files=["res://.godot/imported/Felicitări ai învăța.wav-d591f23de6350f3c80141ba4a8b0e7dc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

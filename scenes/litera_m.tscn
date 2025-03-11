@@ -1,0 +1,345 @@
+[gd_scene load_steps=30 format=3 uid="uid://js5gtps05dcd"]
+
+[ext_resource type="Script" path="res://scenes/litera_m.gd" id="1_rqa7i"]
+[ext_resource type="AudioStream" uid="uid://divx0c78lx48c" path="res://assets/sounds/voices/Intro_litera_M.wav" id="2_2egh3"]
+[ext_resource type="Texture2D" uid="uid://csthun6iltsby" path="res://assets/images/letter_m/background.jpg" id="2_tvwl1"]
+[ext_resource type="Texture2D" uid="uid://ct0adbu4cwn6d" path="res://assets/images/letter_m/dog.png" id="4_f10ft"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="4_occsv"]
+[ext_resource type="Texture2D" uid="uid://6vq7yoqwnovd" path="res://assets/images/letter_m/duck.png" id="4_tqmia"]
+[ext_resource type="Texture2D" uid="uid://l4fqgwcmo186" path="res://assets/images/letter_m/empty_check_mark.png" id="5_x8vuy"]
+[ext_resource type="Texture2D" uid="uid://cgbrj14q2ttm" path="res://assets/images/letter_m/cow.png" id="6_87xw3"]
+[ext_resource type="Texture2D" uid="uid://coj0t3tciyt3y" path="res://assets/images/letter_m/cat.png" id="7_nppnw"]
+[ext_resource type="Texture2D" uid="uid://dn3biafwov30f" path="res://assets/images/letter_m/frog.png" id="8_58dtg"]
+[ext_resource type="AudioStream" uid="uid://bqxy3044uaxhi" path="res://assets/sounds/voices/sunete_animale/rata.wav" id="10_rhvl0"]
+[ext_resource type="AudioStream" uid="uid://bl68thjkyh57q" path="res://assets/sounds/voices/sunete_animale/caine.wav" id="12_efj4k"]
+[ext_resource type="AudioStream" uid="uid://cdqcbpcogtwut" path="res://assets/sounds/voices/sunete_animale/vaca.wav" id="13_a625r"]
+[ext_resource type="AudioStream" uid="uid://bieja4pjcp85f" path="res://assets/sounds/voices/sunete_animale/pisica.wav" id="14_bdtoy"]
+[ext_resource type="AudioStream" uid="uid://i05w65vfsujt" path="res://assets/sounds/voices/sunete_animale/broasca.wav" id="15_0pqph"]
+[ext_resource type="Texture2D" uid="uid://dnb1ciry4nclv" path="res://assets/images/letter_m/score_dialog.png" id="16_5tybo"]
+[ext_resource type="StyleBox" uid="uid://swsvx05ntxfx" path="res://assets/styles/button.tres" id="17_jtejg"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="17_oeud4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iklmx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sxk84"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_to5nv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3b758"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1uoso"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5jjs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ks0qv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2rwpp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5c625"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s5ixc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1idgr"]
+
+[node name="LiteraM" type="Node2D"]
+script = ExtResource("1_rqa7i")
+
+[node name="BgLiteraMField" type="Sprite2D" parent="."]
+position = Vector2(578.25, 325)
+scale = Vector2(1.10786, 1.09492)
+texture = ExtResource("2_tvwl1")
+
+[node name="IntroM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_2egh3")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DogPanel" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.75
+anchor_top = 3.775
+anchor_right = 5.825
+anchor_bottom = 7.425
+offset_left = 169.0
+offset_top = 129.0
+offset_right = 417.0
+offset_bottom = 237.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Animal" type="Button" parent="Control/DogPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_iklmx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iklmx")
+icon = ExtResource("4_f10ft")
+
+[node name="CheckButton" type="Button" parent="Control/DogPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_sxk84")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sxk84")
+icon = ExtResource("5_x8vuy")
+alignment = 2
+icon_alignment = 2
+
+[node name="CowPanel" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = 98.0
+offset_right = 253.0
+offset_bottom = 318.0
+
+[node name="Animal" type="Button" parent="Control/CowPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_to5nv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_to5nv")
+icon = ExtResource("6_87xw3")
+
+[node name="CheckButton" type="Button" parent="Control/CowPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3b758")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3b758")
+icon = ExtResource("5_x8vuy")
+alignment = 2
+icon_alignment = 2
+
+[node name="CatPanel" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 443.0
+offset_top = 91.0
+offset_right = 694.0
+offset_bottom = 325.0
+
+[node name="Animal" type="Button" parent="Control/CatPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1uoso")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1uoso")
+icon = ExtResource("7_nppnw")
+
+[node name="CheckButton" type="Button" parent="Control/CatPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_w5jjs")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w5jjs")
+icon = ExtResource("5_x8vuy")
+alignment = 2
+icon_alignment = 2
+
+[node name="FrogPanel" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 757.0
+offset_top = 310.0
+offset_right = 1008.0
+offset_bottom = 535.0
+
+[node name="Animal" type="Button" parent="Control/FrogPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ks0qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ks0qv")
+icon = ExtResource("8_58dtg")
+
+[node name="CheckButton" type="Button" parent="Control/FrogPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2rwpp")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rwpp")
+icon = ExtResource("5_x8vuy")
+alignment = 2
+icon_alignment = 2
+
+[node name="DuckPanel" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.45
+anchor_top = 6.475
+anchor_right = -3.45
+anchor_bottom = 10.125
+offset_left = 169.0
+offset_top = 129.0
+offset_right = 420.0
+offset_bottom = 237.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Animal" type="Button" parent="Control/DuckPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5c625")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5c625")
+icon = ExtResource("4_tqmia")
+
+[node name="CheckButton" type="Button" parent="Control/DuckPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_s5ixc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s5ixc")
+icon = ExtResource("5_x8vuy")
+alignment = 2
+icon_alignment = 2
+
+[node name="Verify" type="Button" parent="."]
+offset_left = 550.0
+offset_top = 563.0
+offset_right = 674.0
+offset_bottom = 605.0
+theme = ExtResource("4_occsv")
+text = " Verifică "
+icon_alignment = 1
+
+[node name="Duck" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_rhvl0")
+
+[node name="Dog" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_efj4k")
+
+[node name="Cow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_a625r")
+
+[node name="Cat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_bdtoy")
+
+[node name="Frog" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_0pqph")
+
+[node name="ScoreDialog" type="Button" parent="."]
+offset_left = 425.0
+offset_top = 427.0
+offset_right = 825.0
+offset_bottom = 659.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1idgr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1idgr")
+icon = ExtResource("16_5tybo")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScoreDialog"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 78.0
+offset_right = 68.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("17_oeud4")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("17_jtejg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="pressed" from="Control/DogPanel/Animal" to="." method="_on_dog_pressed"]
+[connection signal="pressed" from="Control/DogPanel/CheckButton" to="." method="_on_check_dog_button_pressed"]
+[connection signal="pressed" from="Control/CowPanel/Animal" to="." method="_on_cow_pressed"]
+[connection signal="pressed" from="Control/CowPanel/CheckButton" to="." method="_on_check_cow_button_pressed"]
+[connection signal="pressed" from="Control/CatPanel/Animal" to="." method="_on_cat_pressed"]
+[connection signal="pressed" from="Control/CatPanel/CheckButton" to="." method="_on_check_cat_button_pressed"]
+[connection signal="pressed" from="Control/FrogPanel/Animal" to="." method="_on_frog_pressed"]
+[connection signal="pressed" from="Control/FrogPanel/CheckButton" to="." method="_on_check_frog_button_pressed"]
+[connection signal="pressed" from="Control/DuckPanel/Animal" to="." method="_on_duck_pressed"]
+[connection signal="pressed" from="Control/DuckPanel/CheckButton" to="." method="_on_check_duck_button_pressed"]
+[connection signal="pressed" from="Verify" to="." method="_on_verify_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

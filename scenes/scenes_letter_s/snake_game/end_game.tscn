@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0xqalq55i8bs"]
+
+[ext_resource type="Script" path="res://scripts/scripts_letter_s/snake_game/end_game.gd" id="1_n8ekv"]
+[ext_resource type="Texture2D" uid="uid://b3u831mh83jdq" path="res://assets/images/letter_s_scene/end_game_background.png" id="2_pvp0e"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_yerc0"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="4_52pwr"]
+[ext_resource type="Texture2D" uid="uid://d072tppeo8rhd" path="res://assets/images/letter_s_scene/snake_closed.png" id="5_7e7a4"]
+[ext_resource type="AudioStream" uid="uid://0fnnjryj4dci" path="res://assets/sounds/voices/sounds_letter_s/game_over.wav" id="6_jr5ty"]
+[ext_resource type="AudioStream" uid="uid://bbvhxkpsajgy2" path="res://assets/sounds/voices/sounds_letter_s/good_job.wav" id="7_x0pds"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7u7q4"]
+texture = ExtResource("2_pvp0e")
+
+[node name="EndGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n8ekv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1151.0
+offset_bottom = 645.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7u7q4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 305.0
+offset_top = 28.0
+offset_right = 817.0
+offset_bottom = 75.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_52pwr")
+theme_override_font_sizes/font_size = 25
+text = "Bravo! Ai găsit toate literele S!"
+horizontal_alignment = 1
+
+[node name="Snake" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 480.0
+offset_top = 237.0
+offset_right = 830.0
+offset_bottom = 542.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_7e7a4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 410.0
+offset_top = 565.0
+offset_right = 682.0
+offset_bottom = 619.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="ExitButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_yerc0")
+text = "Ieși din joc"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Exit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jr5ty")
+
+[node name="Introduction" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_x0pds")
+
+[connection signal="ready" from="Label" to="." method="_on_label_ready"]
+[connection signal="mouse_entered" from="HBoxContainer/ExitButton" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="HBoxContainer/ExitButton" to="." method="_on_exit_pressed"]
+[connection signal="finished" from="Exit" to="." method="_on_sound_finished"]
+[connection signal="finished" from="Introduction" to="." method="_on_introduction_finished"]

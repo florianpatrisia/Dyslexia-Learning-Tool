@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://dq6tmkuhiamtq"]
+
+[ext_resource type="Texture2D" uid="uid://cnhh0846bj5sb" path="res://assets/images/letter_b_scene/background.jpg" id="1_lt1uf"]
+[ext_resource type="Script" path="res://scripts/scripts_letter_b/sfarsit_litera_b.gd" id="2_ok3ry"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_n1jqn"]
+[ext_resource type="AudioStream" uid="uid://bhm58ml4vl2uf" path="res://assets/sounds/voices/sounds_letter_b/inapoi.wav" id="4_115py"]
+[ext_resource type="AudioStream" uid="uid://dwrb68te0civ4" path="res://assets/sounds/voices/sounds_letter_b/felicitari.wav" id="5_rp11t"]
+[ext_resource type="Texture2D" uid="uid://5ced4u3d0om7" path="res://assets/images/letter_b_scene/banner.png" id="6_0qf7u"]
+
+[node name="SfarsitB" type="Node2D"]
+script = ExtResource("2_ok3ry")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576.5, 321.5)
+scale = Vector2(0.643415, 0.635742)
+texture = ExtResource("1_lt1uf")
+
+[node name="inapoi" type="Button" parent="."]
+offset_left = 534.0
+offset_top = 487.0
+offset_right = 625.0
+offset_bottom = 532.0
+theme = ExtResource("3_n1jqn")
+text = "Inapoi
+"
+
+[node name="Inapoi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_115py")
+
+[node name="Felicitari" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rp11t")
+
+[node name="Banner" type="Sprite2D" parent="."]
+position = Vector2(587, 179)
+scale = Vector2(0.695711, 0.591328)
+texture = ExtResource("6_0qf7u")
+
+[node name="Label_Felicitari" type="Label" parent="Banner"]
+offset_left = -214.169
+offset_top = -123.451
+offset_right = -59.1694
+offset_bottom = -68.4509
+scale = Vector2(3, 3)
+theme_override_font_sizes/font_size = 18
+text = "Felicitari!
+Ai învățat litera B!
+"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="inapoi" to="." method="_on_inapoi_mouse_entered"]
+[connection signal="pressed" from="inapoi" to="." method="_on_inapoi_pressed"]

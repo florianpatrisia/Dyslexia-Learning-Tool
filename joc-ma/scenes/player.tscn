@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmqidkxhp63mq"]
+
+[ext_resource type="Script" path="res://joc-ma/scripts/player.gd" id="1_g5561"]
+[ext_resource type="Texture2D" uid="uid://dfpm6vw1fastf" path="res://joc-ma/assets/textures/Dragon.png" id="2_plwdf"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_g5561")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_plwdf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 17, -34, -4, -27, 1, -8, -9, -5, -27, 6, -27, 9, -8, 26, 1, 34, -5, 33, 17, 10, 19, 6, 26, -6, 26, -10, 19)
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(0, -38)

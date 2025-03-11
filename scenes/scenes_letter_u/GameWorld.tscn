@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://llcwb0obrgmu"]
+
+[ext_resource type="Script" path="res://scenes/scenes_letter_u/game_world.gd" id="1_5cg4m"]
+[ext_resource type="Texture2D" uid="uid://der0lwc1mfli" path="res://assets/images/letter_u/nature4.jpg" id="2_dltxq"]
+[ext_resource type="PackedScene" uid="uid://dy48rn2kh314m" path="res://scenes/scenes_letter_u/player.tscn" id="3_ivipr"]
+[ext_resource type="PackedScene" uid="uid://ikmnk6d4nl0g" path="res://scenes/scenes_letter_u/FallingObject.tscn" id="4_jxs24"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="5_mh7bw"]
+[ext_resource type="Texture2D" uid="uid://43rwbanreyaa" path="res://assets/images/coin.png" id="6_mwcqu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5dg51"]
+font = ExtResource("5_mh7bw")
+font_size = 28
+font_color = Color(0.00697919, 0.0135641, 0.00502418, 0.870588)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8pbkf"]
+line_spacing = 100.0
+font = ExtResource("5_mh7bw")
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 11
+shadow_color = Color(0.709804, 0.886275, 0, 0)
+
+[node name="GameWorld" type="Node2D"]
+script = ExtResource("1_5cg4m")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(575, 327)
+scale = Vector2(0.60166, 0.859439)
+texture = ExtResource("2_dltxq")
+
+[node name="Player" parent="." instance=ExtResource("3_ivipr")]
+position = Vector2(-471, 1)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="FallingObject" parent="." instance=ExtResource("4_jxs24")]
+position = Vector2(239, 120)
+
+[node name="ScoreLabel" type="Label" parent="."]
+top_level = true
+offset_left = 3.0
+offset_right = 187.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("5_mh7bw")
+text = "SCORE:0"
+label_settings = SubResource("LabelSettings_5dg51")
+uppercase = true
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(149, 22)
+scale = Vector2(0.038086, 0.0410156)
+texture = ExtResource("6_mwcqu")
+
+[node name="CongratulationLabel" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 237.0
+offset_right = 1100.0
+offset_bottom = 394.0
+theme_override_fonts/font = ExtResource("5_mh7bw")
+theme_override_font_sizes/font_size = 100
+label_settings = SubResource("LabelSettings_8pbkf")
+
+[connection signal="area_entered" from="Player" to="Player" method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

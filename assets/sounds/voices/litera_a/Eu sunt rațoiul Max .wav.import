@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bbvymfn0edkto"
+path="res://.godot/imported/Eu sunt rațoiul Max .wav-5152db3b11fd6f3dc28bb428366e84e0.sample"
+
+[deps]
+
+source_file="res://assets/sounds/voices/litera_a/Eu sunt rațoiul Max .wav"
+dest_files=["res://.godot/imported/Eu sunt rațoiul Max .wav-5152db3b11fd6f3dc28bb428366e84e0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

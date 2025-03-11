@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b54nldhh57vip"]
+
+[ext_resource type="Texture2D" uid="uid://b5uwk7qqsixdu" path="res://assets/images/silaba_ca/background.png" id="1_g2i5y"]
+[ext_resource type="Script" path="res://scripts/scripts_silaba_ca/joc_silaba_ca.gd" id="1_vv2p4"]
+
+[node name="JocSilabaCa" type="Node2D"]
+script = ExtResource("1_vv2p4")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(688, 339)
+scale = Vector2(0.768973, 0.662109)
+texture = ExtResource("1_g2i5y")
+
+[node name="WordLabel" type="Label" parent="."]
+offset_left = 530.0
+offset_top = 344.0
+offset_right = 570.0
+offset_bottom = 367.0
+text = "LABEL"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+offset_left = 323.0
+offset_top = 445.0
+offset_right = 839.0
+offset_bottom = 621.0

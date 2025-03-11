@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3hxnvvmug633"
+path="res://.godot/imported/Iepurașul Ipo are ne.wav-e00af777ea71009c4f816e5ac98b459c.sample"
+
+[deps]
+
+source_file="res://assets/sounds/voices/sounds_letter_i/wav/Iepurașul Ipo are ne.wav"
+dest_files=["res://.godot/imported/Iepurașul Ipo are ne.wav-e00af777ea71009c4f816e5ac98b459c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

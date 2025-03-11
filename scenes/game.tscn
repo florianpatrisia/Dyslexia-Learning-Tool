@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://dg7ukps38mqiy"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_1gs77"]
+[ext_resource type="Texture2D" uid="uid://dfurount6tm" path="res://assets/images/bg.jpg" id="1_8xw1p"]
+[ext_resource type="FontFile" uid="uid://da6aldi4f55m8" path="res://assets/fonts/Comic Sans MS.ttf" id="2_176jy"]
+[ext_resource type="Theme" uid="uid://dkajsyca3vk2b" path="res://assets/themes/default_button.tres" id="3_hlp5g"]
+[ext_resource type="AudioStream" uid="uid://8uk6utx3e8wo" path="res://assets/sounds/voices/Welcome.wav" id="5_80jnq"]
+[ext_resource type="AudioStream" uid="uid://cthfwhsdwbf3t" path="res://assets/sounds/voices/Intră în aventură.wav" id="6_viqxa"]
+[ext_resource type="AudioStream" uid="uid://0my6fgtmlwr3" path="res://assets/sounds/voices/Închide jocul.wav" id="7_568m8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_esdmi"]
+texture = ExtResource("1_8xw1p")
+modulate_color = Color(0.758192, 0.758192, 0.758192, 1)
+
+[node name="MainMenu" type="Control" groups=["Persist"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1gs77")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_esdmi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.5
+offset_top = -59.5
+offset_right = 175.5
+offset_bottom = 59.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_hlp5g")
+text = "Intră în aventură"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_hlp5g")
+text = "Închide jocul"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = -176.0
+offset_right = 257.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("2_176jy")
+theme_override_font_sizes/font_size = 60
+text = "Aventura literelor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Titlu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_80jnq")
+
+[node name="Joaca" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_viqxa")
+
+[node name="Iesi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_568m8")
+
+[connection signal="mouse_entered" from="VBoxContainer/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="ready" from="VBoxContainer/Play" to="." method="_on_play_ready"]
+[connection signal="mouse_entered" from="VBoxContainer/Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="ready" from="VBoxContainer/Exit" to="." method="_on_exit_ready"]
+[connection signal="ready" from="Label" to="." method="_on_label_ready"]
+[connection signal="finished" from="Titlu" to="." method="_on_titlu_finished"]
